@@ -4,8 +4,7 @@ import Myrouter from './Pages/Myrouter';
 function App() {
   return (
     <div>
-      <Myrouter/>
-
+      <Myrouter />
     </div>
   );
 }
