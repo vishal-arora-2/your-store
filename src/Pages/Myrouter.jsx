@@ -5,7 +5,7 @@ import About from './About';
 import Cart from './Cart';
 import Home from './Home';
 import Navbar from './Navbar';
-import Footer from './Footer/Footer';
+import Footer from '../components/Footer/Footer';
 
 const Myrouter = () => {
     return (
