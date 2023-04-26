@@ -1,6 +1,7 @@
 import React from 'react'
 import { MDBFooter, MDBContainer, MDBRow, MDBCol, MDBIcon } from 'mdb-react-ui-kit';
-
+import { BsFacebook, BsTwitter, BsGithub, BsInstagram, BsGoogle,BsLinkedin  } from 'react-icons/bs';
+import {AiOutlineHome , AiOutlineMail, AiOutlinePhone ,AiOutlinePrinter} from 'react-icons/ai'
 const Footer = () => {
   return (
     <MDBFooter bgColor='light' className='text-center text-lg-start text-muted'>
@@ -11,22 +12,22 @@ const Footer = () => {
 
       <div>
         <a href='' className='me-4 text-reset'>
-          <MDBIcon fab icon="facebook-f" />
+        <BsFacebook/>
         </a>
         <a href='' className='me-4 text-reset'>
-          <MDBIcon fab icon="twitter" />
+        <BsTwitter/>
         </a>
         <a href='' className='me-4 text-reset'>
-          <MDBIcon fab icon="google" />
+         <BsGoogle/>
         </a>
         <a href='' className='me-4 text-reset'>
-          <MDBIcon fab icon="instagram" />
+        <BsInstagram/>
         </a>
         <a href='' className='me-4 text-reset'>
-          <MDBIcon fab icon="linkedin" />
+         <BsLinkedin/>
         </a>
         <a href='' className='me-4 text-reset'>
-          <MDBIcon fab icon="github" />
+          <BsGithub/>
         </a>
       </div>
     </section>
@@ -73,22 +74,22 @@ const Footer = () => {
             <h6 className='text-uppercase fw-bold mb-4'>Useful links</h6>
             <p>
               <a href='#!' className='text-reset'>
-                Pricing
+                Electronics
               </a>
             </p>
             <p>
               <a href='#!' className='text-reset'>
-                Settings
+              Jewellery
               </a>
             </p>
             <p>
               <a href='#!' className='text-reset'>
-                Orders
+               Men's Clothing
               </a>
             </p>
             <p>
               <a href='#!' className='text-reset'>
-                Help
+               Women's Clothing
               </a>
             </p>
           </MDBCol>
@@ -96,18 +97,18 @@ const Footer = () => {
           <MDBCol md="4" lg="3" xl="3" className='mx-auto mb-md-0 mb-4'>
             <h6 className='text-uppercase fw-bold mb-4'>Contact</h6>
             <p>
-              <MDBIcon icon="home" className="me-2" />
+              <AiOutlineHome className="me-2" />
               New York, NY 10012, US
             </p>
             <p>
-              <MDBIcon icon="envelope" className="me-3" />
+              <AiOutlineMail className="me-3" />
               info@example.com
             </p>
             <p>
-              <MDBIcon icon="phone" className="me-3" /> + 01 234 567 88
+              <AiOutlinePhone className="me-3" /> + 01 234 567 88
             </p>
             <p>
-              <MDBIcon icon="print" className="me-3" /> + 01 234 567 89
+              <AiOutlinePrinter className="me-3" /> + 01 234 567 89
             </p>
           </MDBCol>
         </MDBRow>
