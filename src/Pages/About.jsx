@@ -1,11 +1,7 @@
-import React from 'react'
-import Card from '../components/Card'
-const About = () => {
-  return (
-    <div>
-      <Card/>
-    </div>
-  )
-}
+import React from "react";
 
-export default About
+const About = () => {
+  return <div>About</div>;
+};
+
+export default About;
