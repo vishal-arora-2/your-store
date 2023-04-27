@@ -5,6 +5,7 @@ import Cart from "./Cart";
 import Home from "./Home";
 import Navbar from "./Navbar";
 import Footer from "../components/Footer/Footer";
+import Products from "./Products";
 import ProductList from "./ProductList";
 
 const Myrouter = () => {
@@ -16,6 +17,7 @@ const Myrouter = () => {
           <Route path="/" element={<Home />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/about" element={<About />} />
+          <Route path="/products" element={<Products />} />
           <Route path="/productlist" element={<ProductList />} />
         </Routes>
         <Footer />
