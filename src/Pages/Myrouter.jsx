@@ -7,6 +7,7 @@ import Navbar from "./Navbar";
 import Footer from "../components/Footer/Footer";
 import Products from "./Products";
 import ProductList from "./ProductList";
+import CartReview from "./CartReview";
 
 const Myrouter = () => {
   return (
@@ -19,6 +20,7 @@ const Myrouter = () => {
           <Route path="/about" element={<About />} />
           <Route path="/products" element={<Products />} />
           <Route path="/productlist" element={<ProductList />} />
+          <Route path="/cartreview" element={<CartReview />} />
         </Routes>
         <Footer />
       </BrowserRouter>
