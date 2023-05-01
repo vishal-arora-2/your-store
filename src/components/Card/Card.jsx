@@ -1,15 +1,23 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import { cartActions } from "../../slice/cartSlice";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 const CardComponent = (props) => {
+  const [quantity, setQuantity] = useState(0);
+
   const { id, title, image, price } = props.data;
   const dispatch = useDispatch();
-  const AddToCart = () => {
-    dispatch(
-      cartActions.addItem(props.data)
-    );
+  const addToCart = () => {
+    setQuantity(quantity + 1);
+    dispatch(cartActions.addItem(props.data, quantity));
+    console.log(props.data);
+  };
+  const cart = useSelector((state) => {
+    return state.cart;
+  });
+  const plusHandeler = () => {
+    addToCart();
   };
 
   return (
@@ -19,9 +27,19 @@ const CardComponent = (props) => {
         <Card.Body>
           <Card.Title>{title}</Card.Title>
           <Card.Text>{`$${price}`}</Card.Text>
-          <Button onClick={AddToCart} variant="warning">
-            Add to cart
-          </Button>
+          {!quantity ? (
+            <div>
+              <Button onClick={addToCart} variant="warning">
+                Add to cart
+              </Button>
+            </div>
+          ) : (
+            <div>
+              <Button>-</Button>
+              {quantity}
+              <Button onClick={plusHandeler}>+</Button>
+            </div>
+          )}
         </Card.Body>
       </Card>
     </div>

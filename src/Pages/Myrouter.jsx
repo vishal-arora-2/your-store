@@ -5,7 +5,6 @@ import Cart from "./Cart";
 import Home from "./Home";
 import Navbar from "./Navbar";
 import Footer from "../components/Footer/Footer";
-import Products from "./Products";
 import ProductList from "./ProductList";
 import CartReview from "./CartReview";
 
@@ -16,9 +15,8 @@ const Myrouter = () => {
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/cart" element={<Cart />} />
+          <Route path="/cart" element={<CartReview />} />
           <Route path="/about" element={<About />} />
-          <Route path="/products" element={<Products />} />
           <Route path="/productlist" element={<ProductList />} />
           <Route path="/cartreview" element={<CartReview />} />
         </Routes>
