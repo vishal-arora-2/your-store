@@ -44,7 +44,7 @@ const HeaderNavbar = () => {
                 <li class="nav-tem">
                   <NavLink
                     className="nav-link text-light ms-3 btn btn-outline-danger px-4 fw-semibold border-0"
-                    to="/products"
+                    to="/productlist"
                   >
                     Products
                   </NavLink>
