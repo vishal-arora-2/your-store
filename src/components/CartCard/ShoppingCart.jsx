@@ -1,0 +1,54 @@
+import React from 'react'
+import { useState, useEffect } from 'react';
+import { useSelector } from 'react-redux';
+import TestCard from './LeftCartCard';
+import Total from './RightTotal';
+import { MdOutlineRemoveShoppingCart } from 'react-icons/md'
+import { Link } from 'react-router-dom';
+
+const CartCard = () => {
+
+    const [details, setdetails] = useState([])
+    const data=useSelector(state=>{
+      return state.cart.cartItems;
+    })
+  
+    useEffect(()=>{
+      setdetails(data);
+    },[data])
+
+
+  return (
+  <>
+ {details.length===0 ? (
+  <>
+<div style={{textAlign:"center"}}><MdOutlineRemoveShoppingCart style={{fontSize:"10rem"}}/>
+<h2>Your Cart is empty</h2>
+<Link to="/productlist"><button className='btn btn-success'>Explore Products</button></Link>
+</div>
+</>
+ ) : (
+  <section className="h-100 gradient-custom">
+  <div className="container py-5">
+    <div className="row d-flex justify-content-center my-4">
+      <div className="col-md-8">
+        <div className="card mb-4">
+          <div className="card-header py-3">
+            <h5 className="mb-0">Shopping Cart</h5>
+          </div>
+          {details.map((b)=>{
+        return <TestCard b={b} />
+    })}  
+        </div>
+         
+      </div> 
+      <Total/>
+    </div>
+  </div>
+</section>
+ )}
+  </>
+  )
+}
+
+export default CartCard
