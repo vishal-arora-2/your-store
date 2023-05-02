@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
+import { NavLink } from "react-router-dom";
 import { cartActions } from "../../slice/cartSlice";
 import { useDispatch, useSelector } from "react-redux";
 const CardComponent = (props) => {
@@ -21,7 +22,7 @@ const CardComponent = (props) => {
   };
 
   return (
-    <div className="m-4" style={{ display: "inline-block" }}>
+   <NavLink to={`/product/${id}`}> <div className="m-4" style={{ display: "inline-block" }}>
       <Card style={{ width: "18rem" }}>
         <Card.Img variant="top" src={image} style={{ height: "18rem" }} />
         <Card.Body>
@@ -43,6 +44,7 @@ const CardComponent = (props) => {
         </Card.Body>
       </Card>
     </div>
+    </NavLink> 
   );
 };
 
