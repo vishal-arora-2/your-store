@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
+import Total from "../components/CartCard/RightTotal";
 import CartReviewCard from "../components/CartReviewCard/CartReviewCard";
 
 const CartReview = () => {
@@ -13,19 +14,17 @@ const CartReview = () => {
   }, [data.cartItems]);
 
   return (
-    <section class="h-100" style={{ backgroundColor: "#eee" }}>
-      <div class="container h-100 py-5">
-        <div class="row d-flex justify-content-center align-items-center h-100">
-          <div class="col-10">
-            <div class="d-flex justify-content-between align-items-center mb-4">
-              <h3 class="fw-normal mb-0 text-black">Cart Review</h3>
-            </div>
-            <div>
+    <section className="h-100 gradient-custom">
+      <div className="container py-5">
+        <div className="row d-flex justify-content-center my-4">
+          <div className="col-md-8">
+            <div className="card mb-4">
+              <div className="card-header py-3">
+                <h5 className="mb-0">Cart Review</h5>
+              </div>
               {details.map((item) => {
                 return <CartReviewCard item={item} />;
               })}
-            </div>
-            <div class="card">
               <div class="card-body">
                 <button type="button" class="btn btn-warning btn-block btn-lg">
                   Proceed to Pay
@@ -33,6 +32,7 @@ const CartReview = () => {
               </div>
             </div>
           </div>
+          <Total condition={"1"} />
         </div>
       </div>
     </section>
