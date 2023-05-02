@@ -52,10 +52,10 @@ const Total = () => {
           </li>
         </ul>
 
-        <button type="button" class="btn btn-primary btn-lg btn-block">
+        <button type="button" class="btn btn-dark btn-lg btn-block">
           Go to checkout
         </button>
-        <button type="button" class="btn btn-warning btn-lg btn-block" onClick={removeallfromcart}>
+        <button type="button" class="btn btn-warning btn-lg btn-block" style={{marginTop:"10px"}} onClick={removeallfromcart}>
           Clear Cart
         </button>
       </div>
