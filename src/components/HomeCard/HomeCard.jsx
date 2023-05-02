@@ -74,21 +74,19 @@ useEffect(() => {
       }, []);
 
   return (
+    
+    
     <div className='shadow-lg p-1 mt-3'>
-         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4 p-5">
-                <div class="col">
-                    <div class="card border-white mt-5">
-                        <div className='card-img-top'>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#198754" fill-opacity="1" d="M0,224L48,186.7C96,149,192,75,288,80C384,85,480,171,576,186.7C672,203,768,149,864,133.3C960,117,1056,139,1152,149.3C1248,160,1344,160,1392,160L1440,160L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>                                </div>
-                        <div class="card-body">
-                            <h2>
-                                <span class="badge bg-success">Best of {props.name}</span>
-                            </h2>
-                            <p class="card-text mt-4">Get the best of {props.name} deals now!</p>
-                            <button className='btn btn-warning'>View Now</button>
-                        </div>
-                    </div>
-                </div>
+        <div>
+            <div style={{height:"20px"}}>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#273036" fill-opacity="0.2" d="M0,192L48,176C96,160,192,128,288,128C384,128,480,160,576,192C672,224,768,256,864,245.3C960,235,1056,181,1152,160C1248,139,1344,149,1392,154.7L1440,160L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>
+        </div>
+        <h2> 
+        <span class="badge bg-dark mx-5 mt-4">Best of {props.name}</span>
+        </h2>
+            
+        </div>
+         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-5 g-5 p-5">
                 <div class="col">
                     <CardComponent data={prod1}/>
 
@@ -102,6 +100,7 @@ useEffect(() => {
                     </div>
                 </div>
             </div>
+            
   )
 }
 

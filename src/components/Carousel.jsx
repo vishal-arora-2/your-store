@@ -8,6 +8,7 @@ import product3 from "../assets/product3.PNG"
 
 const Carousel = () => {
   return (
+    <>
     <div>
         <div id="demo" class="carousel slide" data-bs-ride="carousel">
 
@@ -30,14 +31,23 @@ const Carousel = () => {
 </div>
 
 <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
-  <span class="carousel-control-prev-icon bg-dark"></span>
+  <span class="carousel-control-prev-icon bg-secondary"></span>
 </button>
 <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
-  <span class="carousel-control-next-icon bg-dark"></span>
+  <span class="carousel-control-next-icon bg-secondary"></span>
 </button>
 </div>
 
     </div>
+    <div class="container">
+	<div class="row">
+	<div class="alert alert-success alert-dismissible" role="alert">
+  <strong style={{marginLeft:"30%",fontFamiy:"Arial"}}> GET SALE ON PRODUCTS THIS FESTIVE SEASON ! DON'T MISS OUT ON THEM</strong> <marquee><p style={{}}>SALE ON PRODUCTS THIS FESTIVE SEASON, UPTO 90% SALE ON EXCLUSIVE BRANDS</p></marquee>
+</div>
+	</div>
+</div>
+</>
+
   )
 }
 
