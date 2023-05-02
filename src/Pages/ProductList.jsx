@@ -1,27 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Card from "../components/Card";
 import axios from "axios";
-// const data = [
-//   {
-//     id: 1,
-//     title: "Samsung",
-//     image:
-//       "https://rukminim1.flixcart.com/image/416/416/ktketu80/mobile/f/o/s/iphone-13-mlpf3hn-a-apple-original-imag6vzzemfy9nse.jpeg?q=70",
-//     price: 6000,
-//   },
-// ];
-// axios({
-//     method: "get",
-//     url: "https://fakestoreapi.com/products",
-//   }).then(
-//     (req) => {
-//       setData(req.data);
-//       console.log(req.data);
-//     },
-//     (err) => {
-//       console.log("Error:", err);
-//     }
-//   );
+import FilterSection from "../components/FilterSection";
 const ProductList = () => {
   const [data, setData] = useState([]);
   const [filter, setFilter] = useState(data);
@@ -42,47 +22,63 @@ const ProductList = () => {
     setFilter(updateList);
   };
   return (
-    <>
-      <div className="container">
-        <div className="buttons dflex justift-content-centre mb-5 pb-5">
-          <button
-            className="btn btn-outline-dark me-2"
-            onClick={() => setFilter(data)}
-          >
-            All
-          </button>
-          <button
-            className="btn btn-outline-dark me-2"
-            onClick={() => filterProduct("men's clothing")}
-          >
-            Men's Clothing
-          </button>
-          <button
-            className="btn btn-outline-dark me-2"
-            onClick={() => filterProduct("women's clothing")}
-          >
-            Women's Clothing
-          </button>
-          <button
-            className="btn btn-outline-dark me-2"
-            onClick={() => filterProduct("jewelery")}
-          >
-            Jewelery
-          </button>
-          <button
-            className="btn btn-outline-dark me-2"
-            onClick={() => filterProduct("electronics")}
-          >
-            Electronics
-          </button>
+    <div className="container-fluid">
+      <div className="row">
+        <div className="col-md-2">
+          <FilterSection />
+          <div className="buttons dflex justift-content-centre mb-5 pb-5">
+            <ul>
+              <li>
+                <button
+                  className="btn btn-outline-dark me-2 mb-1"
+                  onClick={() => setFilter(data)}
+                >
+                  All
+                </button>
+              </li>
+              <li>
+                <button
+                  className="btn btn-outline-dark me-2 mb-1"
+                  onClick={() => filterProduct("men's clothing")}
+                >
+                  Men's Clothing
+                </button>
+              </li>
+              <li>
+                <button
+                  className="btn btn-outline-dark me-2 mb-1"
+                  onClick={() => filterProduct("women's clothing")}
+                >
+                  Women's Clothing
+                </button>
+              </li>
+              <li>
+                <button
+                  className="btn btn-outline-dark me-2 mb-1"
+                  onClick={() => filterProduct("jewelery")}
+                >
+                  Jewelery
+                </button>
+              </li>
+              <li>
+                <button
+                  className="btn btn-outline-dark me-2 mb-1"
+                  onClick={() => filterProduct("electronics")}
+                >
+                  Electronics
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="col-md-10">
+          {filter.map((items) => {
+            return <Card data={items} />;
+          })}
         </div>
       </div>
-      <div>
-        {filter.map((items) => {
-          return <Card data={items} />;
-        })}
-      </div>
-    </>
+    </div>
   );
 };
 
