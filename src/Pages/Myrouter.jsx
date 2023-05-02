@@ -16,7 +16,7 @@ const Myrouter = () => {
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/cart" element={<CartReview />} />
+          <Route path="/cart" element={<Cart />} />
           <Route path="/about" element={<About />} />
           <Route path="/productlist" element={<ProductList />} />
           <Route path="/cartreview" element={<CartReview />} />

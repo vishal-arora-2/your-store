@@ -2,11 +2,16 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import { HiOutlineShoppingCart } from "react-icons/hi";
 import { BsAsterisk } from "react-icons/bs";
+import { useSelector } from "react-redux";
 
 const HeaderNavbar = () => {
+  const quan =useSelector(state=>{
+    return state.cart.totalQuantity;
+  })
+
   return (
     <>
-      <section class="bg-dark py-2">
+      <section class="bg-dark py-2 mb-4">
         <nav class="navbar navbar-expand-lg bg-dark w-75 w-100 mx-auto">
           <div class="container-fluid">
             <NavLink
@@ -64,7 +69,7 @@ const HeaderNavbar = () => {
                     to="/cart"
                   >
                     <HiOutlineShoppingCart />
-                    <sup>3</sup>
+                    <sup>{quan}</sup>
                   </NavLink>
                 </li>
               </ul>

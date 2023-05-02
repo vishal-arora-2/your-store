@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import { NavLink } from "react-router-dom";
@@ -9,6 +9,10 @@ const CardComponent = (props) => {
 
   const { id, title, image, price } = props.data;
   const dispatch = useDispatch();
+  const minusHandeler = () => {
+    setQuantity(quantity - 1);
+    dispatch(cartActions.decreaseCart(props.data, quantity));
+  };
   const addToCart = () => {
     setQuantity(quantity + 1);
     dispatch(cartActions.addItem(props.data, quantity));
@@ -20,14 +24,16 @@ const CardComponent = (props) => {
   const plusHandeler = () => {
     addToCart();
   };
-
   return (
    <NavLink to={`/product/${id}`}> <div className="m-4" style={{ display: "inline-block" }}>
       <Card style={{ width: "18rem" }}>
         <Card.Img variant="top" src={image} style={{ height: "18rem" }} />
+
         <Card.Body>
-          <Card.Title>{title}</Card.Title>
-          <Card.Text>{`$${price}`}</Card.Text>
+          <Card.Title className="font-weight-normal mb-1 text-truncate">
+            {title}
+          </Card.Title>
+          <Card.Text className="font-weight-bold">{`$${price}`}</Card.Text>
           {!quantity ? (
             <div>
               <Button onClick={addToCart} variant="warning">
@@ -36,7 +42,7 @@ const CardComponent = (props) => {
             </div>
           ) : (
             <div>
-              <Button>-</Button>
+              <Button onClick={minusHandeler}>-</Button>
               {quantity}
               <Button onClick={plusHandeler}>+</Button>
             </div>

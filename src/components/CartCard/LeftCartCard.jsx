@@ -37,27 +37,27 @@ const TestCard = (props) => {
         </div>
 
         <div className="col-lg-5 col-md-6 mb-4 mb-lg-0">
-          <p><strong>{props.b.title}</strong></p>
+          <h4><strong>{props.b.title}</strong></h4>
           <p>{props.b.category}</p>
-          <button type="button" onClick={()=> handleRemoveFromCart(props.b)} className="btn btn-primary btn-sm me-1 mb-2" data-mdb-toggle="tooltip"
+          <button type="button" onClick={()=> handleRemoveFromCart(props.b)} className="btn btn-danger btn-sm me-1 mb-2" data-mdb-toggle="tooltip"
             title="Remove item">
             <i className="fas fa-trash"></i>
           </button>
-          <button type="button" className="btn btn-danger btn-sm mb-2" data-mdb-toggle="tooltip"
+          {/* <button type="button" className="btn btn-danger btn-sm mb-2" data-mdb-toggle="tooltip"
             title="Move to the wish list">
             <i className="fas fa-heart"></i>
-          </button>
+          </button> */}
         </div>
 
         <div className="col-lg-4 col-md-6 mb-4 mb-lg-0">
             
           <div className="d-flex mb-4" style={{maxWidth: "300px"}}>
-            <button className="btn btn-primary px-3 ms-2" style={{height:"40px"}}
+            <button className="btn btn-dark px-3 ms-2" style={{height:"40px"}}
               onClick={()=>minusHandler(props.b)}>
               <i className="fas fa-minus"></i>
             </button>
-            <div><button className='btn btn-light'>{props.b.quantity}</button> </div>
-            <button className="btn btn-primary px-3 ms-2" style={{height:"40px"}}
+            <div><button className='btn btn-light mx-2'>{props.b.quantity}</button> </div>
+            <button className="btn btn-dark px-3" style={{height:"40px"}}
               onClick={plusHandler}>
               <i className="fas fa-plus"></i>
             </button>
