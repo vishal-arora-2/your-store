@@ -10,29 +10,79 @@ import axios from "axios";
 //     price: 6000,
 //   },
 // ];
-
+// axios({
+//     method: "get",
+//     url: "https://fakestoreapi.com/products",
+//   }).then(
+//     (req) => {
+//       setData(req.data);
+//       console.log(req.data);
+//     },
+//     (err) => {
+//       console.log("Error:", err);
+//     }
+//   );
 const ProductList = () => {
   const [data, setData] = useState([]);
+  const [filter, setFilter] = useState(data);
+  const getProducts = async () => {
+    try {
+      const response = await axios.get("https://fakestoreapi.com/products");
+      setData(response.data);
+      setFilter(response.data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
   useEffect(() => {
-    axios({
-      method: "get",
-      url: "https://fakestoreapi.com/products",
-    }).then(
-      (req) => {
-        setData(req.data);
-        console.log(req.data);
-      },
-      (err) => {
-        console.log("Error:", err);
-      }
-    );
+    getProducts();
   }, []);
+  const filterProduct = (cat) => {
+    const updateList = data.filter((x) => x.category === cat);
+    setFilter(updateList);
+  };
   return (
-    <div>
-      {data.map((items) => {
-        return <Card data={items} />;
-      })}
-    </div>
+    <>
+      <div className="container">
+        <div className="buttons dflex justift-content-centre mb-5 pb-5">
+          <button
+            className="btn btn-outline-dark me-2"
+            onClick={() => setFilter(data)}
+          >
+            All
+          </button>
+          <button
+            className="btn btn-outline-dark me-2"
+            onClick={() => filterProduct("men's clothing")}
+          >
+            Men's Clothing
+          </button>
+          <button
+            className="btn btn-outline-dark me-2"
+            onClick={() => filterProduct("women's clothing")}
+          >
+            Women's Clothing
+          </button>
+          <button
+            className="btn btn-outline-dark me-2"
+            onClick={() => filterProduct("jewelery")}
+          >
+            Jewelery
+          </button>
+          <button
+            className="btn btn-outline-dark me-2"
+            onClick={() => filterProduct("electronics")}
+          >
+            Electronics
+          </button>
+        </div>
+      </div>
+      <div>
+        {filter.map((items) => {
+          return <Card data={items} />;
+        })}
+      </div>
+    </>
   );
 };
 
