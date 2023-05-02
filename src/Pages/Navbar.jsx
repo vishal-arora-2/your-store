@@ -6,7 +6,7 @@ import { BsAsterisk } from "react-icons/bs";
 const HeaderNavbar = () => {
   return (
     <>
-      <section class="bg-dark py-2">
+      <section class="bg-dark py-2 mb-4">
         <nav class="navbar navbar-expand-lg bg-dark w-75 w-100 mx-auto">
           <div class="container-fluid">
             <NavLink
