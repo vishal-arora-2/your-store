@@ -18,11 +18,11 @@ const HeaderNavbar = () => {
               className="navbar-brand text-light fw-semibold w-25 ms-lg-5"
               to="/"
             >
-              <i>CartIt</i>
+              <i>CARTit</i>
               &nbsp;
-              <sup>
+              {/* <sup>
                 <BsAsterisk />
-              </sup>
+              </sup> */}
             </NavLink>
             <button
               class="navbar-toggler"
