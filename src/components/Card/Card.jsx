@@ -63,7 +63,7 @@ const CardComponent = (props) => {
         </Card.Body>
       </Card>
     </div>
- 
+    </NavLink> 
   );
 };
 
