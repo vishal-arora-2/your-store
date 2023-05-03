@@ -25,9 +25,9 @@ const CardComponent = (props) => {
     addToCart();
   };
   return (
-   <NavLink to={`/product/${id}`}> <div className="m-4" style={{ display: "inline-block" }}>
+    <div className="m-4" style={{ display: "inline-block" }}>
       <Card style={{ width: "18rem" }}>
-        <Card.Img variant="top" src={image} style={{ height: "18rem" }} />
+      <NavLink to={`/product/${id}`}> <Card.Img variant="top" src={image} style={{ height: "18rem" }} /> </NavLink> 
 
         <Card.Body>
           <Card.Title className="font-weight-normal mb-1 text-truncate">
@@ -50,7 +50,7 @@ const CardComponent = (props) => {
         </Card.Body>
       </Card>
     </div>
-    </NavLink> 
+   
   );
 };
 
