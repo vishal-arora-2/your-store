@@ -4,6 +4,7 @@ import Card from "react-bootstrap/Card";
 import { NavLink } from "react-router-dom";
 import { cartActions } from "../../slice/cartSlice";
 import { useDispatch, useSelector } from "react-redux";
+import { BsFillBagPlusFill } from "react-icons/bs";
 const CardComponent = (props) => {
   const [quantity, setQuantity] = useState(0);
 
