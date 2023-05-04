@@ -36,6 +36,17 @@ const CardComponent = (props) => {
             src={image}
             style={{ height: "13rem", padding: "18px" }}
           />
+    <NavLink to={`/product/${id}`}>
+      <div className="m-4" style={{ display: "inline-block" }}>
+        <Card
+          className="shadow p-3 mb-5 bg-body rounded"
+          style={{ width: "14rem" }}
+        >
+          <Card.Img
+            variant="top"
+            src={image}
+            style={{ height: "13rem", padding: "18px" }}
+          />
 
           <Card.Body>
             <Card.Title className="font-weight-normal mb-1 text-truncate">
