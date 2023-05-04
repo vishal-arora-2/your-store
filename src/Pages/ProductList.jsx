@@ -28,41 +28,41 @@ const ProductList = () => {
           <FilterSection />
           <div className="buttons dflex justift-content-centre mb-5 pb-5">
             <ul>
-              <li>
+              <li className=" list-unstyled ">
                 <button
-                  className="btn btn-outline-dark me-2 mb-1"
+                  className="btn me-2 mb-1"
                   onClick={() => setFilter(data)}
                 >
-                  All
+                  All Categories
                 </button>
               </li>
-              <li>
+              <li className=" list-unstyled ">
                 <button
-                  className="btn btn-outline-dark me-2 mb-1"
+                  className="btn  me-2 mb-1"
                   onClick={() => filterProduct("men's clothing")}
                 >
                   Men's Clothing
                 </button>
               </li>
-              <li>
+              <li className=" list-unstyled ">
                 <button
-                  className="btn btn-outline-dark me-2 mb-1"
+                   className="btn  me-2 mb-1"
                   onClick={() => filterProduct("women's clothing")}
                 >
                   Women's Clothing
                 </button>
               </li>
-              <li>
+              <li className=" list-unstyled ">
                 <button
-                  className="btn btn-outline-dark me-2 mb-1"
+                   className="btn  me-2 mb-1"
                   onClick={() => filterProduct("jewelery")}
                 >
                   Jewelery
                 </button>
               </li>
-              <li>
+              <li className=" list-unstyled ">
                 <button
-                  className="btn btn-outline-dark me-2 mb-1"
+                  className="btn  me-2 mb-1"
                   onClick={() => filterProduct("electronics")}
                 >
                   Electronics

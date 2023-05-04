@@ -15,14 +15,14 @@ const HeaderNavbar = () => {
         <nav class="navbar navbar-expand-lg bg-dark w-75 w-100 mx-auto">
           <div class="container-fluid">
             <NavLink
-              className="navbar-brand text-light fw-semibold w-25 ms-lg-5"
+              className="navbar-brand text-light fw-bold w-25 ms-lg-5"
               to="/"
             >
-              <i>CartIt</i>
+              <span>BuyOnTheFly</span>
               &nbsp;
-              <sup>
+              {/* <sup>
                 <BsAsterisk />
-              </sup>
+              </sup> */}
             </NavLink>
             <button
               class="navbar-toggler"
