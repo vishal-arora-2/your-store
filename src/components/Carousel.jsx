@@ -1,4 +1,5 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 import product1 from "../assets/product1.PNG"
 import product2 from "../assets/product2.PNG"
 import product3 from "../assets/product3.PNG"
@@ -39,13 +40,14 @@ const Carousel = () => {
 </div>
 
     </div>
-    <div class="container">
-	<div class="row">
-	<div class="alert alert-success alert-dismissible" role="alert">
-  <strong style={{marginLeft:"30%",fontFamiy:"Arial"}}> GET SALE ON PRODUCTS THIS FESTIVE SEASON ! DON'T MISS OUT ON THEM</strong> <marquee><p style={{}}>SALE ON PRODUCTS THIS FESTIVE SEASON, UPTO 90% SALE ON EXCLUSIVE BRANDS</p></marquee>
+   
+<NavLink to="/productlist" style={{textDecoration:"none"}}><div className='backi'>
+<marquee><p style={{color:'black'}}><b>SALE ON PRODUCTS THIS FESTIVE SEASON, UPTO 90% SALE ON EXCLUSIVE BRANDS !!!</b></p>
+   </marquee>
+   <h6 style={{marginLeft:"700px",marginTop:"190px",color:"black"}}><b>Click here to get amazing deals ... </b></h6>
+
 </div>
-	</div>
-</div>
+</NavLink>
 </>
 
   )
