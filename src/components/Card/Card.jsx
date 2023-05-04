@@ -44,7 +44,7 @@ const CardComponent = (props) => {
             <Card.Text className="font-weight-bold">{`$${price}`}</Card.Text>
             {!quantity ? (
               <div>
-                <Button onClick={addToCart} className="btn btn-outline-dark">
+                <Button onClick={addToCart} variant="warning">
                   Add to cart
                 </Button>
               </div>
