@@ -36,3 +36,14 @@
     transform: rotate(360deg);
   }
 }
+
+.backi{
+  background-image: url("https://m.media-amazon.com/images/G/31/CookwareDining/MayART23/sale-header-PC._SX3000_QL85_FMpng_.png");
+  background-size:cover;
+  width: 94% ;
+  margin-left:36px;
+  height: 270px;
+ border-radius: 6px;
+  margin-top: 15px;
+  background-position: center;
+}
