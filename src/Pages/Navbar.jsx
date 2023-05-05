@@ -5,13 +5,13 @@ import { BsAsterisk } from "react-icons/bs";
 import { useSelector } from "react-redux";
 
 const HeaderNavbar = () => {
-  const quan =useSelector(state=>{
+  const quan = useSelector((state) => {
     return state.cart.totalQuantity;
-  })
+  });
 
   return (
     <>
-      <section class="bg-dark py-2 mb-4">
+      <section class="bg-dark p-1">
         <nav class="navbar navbar-expand-lg bg-dark w-75 w-100 mx-auto">
           <div class="container-fluid">
             <NavLink
