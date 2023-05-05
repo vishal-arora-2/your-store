@@ -65,6 +65,14 @@ const HeaderNavbar = () => {
                 <li class="nav-item">
                   <NavLink
                     className="nav-link text-light ms-3 btn btn-outline-danger px-4 fw-semibold border-0"
+                    to="/contact"
+                  >
+                    Contact Us
+                  </NavLink>
+                </li>
+                <li class="nav-item">
+                  <NavLink
+                    className="nav-link text-light ms-3 btn btn-outline-danger px-4 fw-semibold border-0"
                     exact
                     to="/cart"
                   >
