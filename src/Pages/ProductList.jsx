@@ -25,51 +25,11 @@ const ProductList = () => {
     <div className="container-fluid">
       <div className="row">
         <div className="col-md-2">
-          <FilterSection />
-          <div className="buttons dflex justift-content-centre mb-5 pb-5">
-            <ul>
-              <li className=" list-unstyled ">
-                <button
-                  className="btn me-2 mb-1"
-                  onClick={() => setFilter(data)}
-                >
-                  All Categories
-                </button>
-              </li>
-              <li className=" list-unstyled ">
-                <button
-                  className="btn  me-2 mb-1"
-                  onClick={() => filterProduct("men's clothing")}
-                >
-                  Men's Clothing
-                </button>
-              </li>
-              <li className=" list-unstyled ">
-                <button
-                   className="btn  me-2 mb-1"
-                  onClick={() => filterProduct("women's clothing")}
-                >
-                  Women's Clothing
-                </button>
-              </li>
-              <li className=" list-unstyled ">
-                <button
-                   className="btn  me-2 mb-1"
-                  onClick={() => filterProduct("jewelery")}
-                >
-                  Jewelery
-                </button>
-              </li>
-              <li className=" list-unstyled ">
-                <button
-                  className="btn  me-2 mb-1"
-                  onClick={() => filterProduct("electronics")}
-                >
-                  Electronics
-                </button>
-              </li>
-            </ul>
-          </div>
+          <FilterSection
+            filterProduct={filterProduct}
+            data={data}
+            setFilter={setFilter}
+          />
         </div>
 
         <div className="col-md-10">
