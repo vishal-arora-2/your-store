@@ -1,9 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 
 const FilterSection = (props) => {
+  const [price, setPrice] = useState(0);
+  const updatePrice = (e) => {
+    const value = e.target.value;
+    setPrice(value);
+    props.filterPrice(value);
+  };
+  const clearfilters = () => {
+    setPrice(0);
+    props.setFilter(props.data);
+  };
   return (
-    <div>
-      <h5>Categories</h5>
+    <div className="mt-4">
+      <h6>Categories</h6>
       <hr />
       <div className="buttons dflex justift-content-centre mb-5 pb-5 ">
         <ul>
@@ -42,11 +52,24 @@ const FilterSection = (props) => {
             Electronics
           </button>
         </ul>
-        <label for="customRange1" class="form-label">
-          <h5>Price</h5>
-          <hr />
-        </label>
-        <input type="range" class="form-range" id="customRange1"></input>
+        <h6>Price</h6>
+        <hr />
+        <ul>
+          <p className="m-0">${price}</p>
+          <input
+            name="price"
+            type="range"
+            min={0}
+            max={1000}
+            value={price}
+            onChange={updatePrice}
+          ></input>
+        </ul>
+        <div className="mt-5" align="center">
+          <button className="btn btn-danger" onClick={clearfilters}>
+            Clear Filters
+          </button>
+        </div>
       </div>
     </div>
   );
