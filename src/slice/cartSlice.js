@@ -6,7 +6,7 @@ const initialState = {
     : [],
     totalQuantity: localStorage.getItem("totalQuantity")
     ? JSON.parse(localStorage.getItem("totalQuantity"))
-    : [],
+    : 0,
 };
 
 

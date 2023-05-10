@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import { HiOutlineShoppingCart } from "react-icons/hi";
 import { BsAsterisk } from "react-icons/bs";
 import { useSelector } from "react-redux";
-
+import './eg.css'
 const HeaderNavbar = () => {
   const quan = useSelector((state) => {
     return state.cart.totalQuantity;
@@ -11,7 +11,7 @@ const HeaderNavbar = () => {
 
   return (
     <>
-      <section class="bg-dark p-1">
+      {/* <section class="bg-dark p-1">
         <nav class="navbar navbar-expand-lg bg-dark w-75 w-100 mx-auto">
           <div class="container-fluid">
             <NavLink
@@ -20,9 +20,6 @@ const HeaderNavbar = () => {
             >
               <i>CARTit</i>
               &nbsp;
-              {/* <sup>
-                <BsAsterisk />
-              </sup> */}
             </NavLink>
             <button
               class="navbar-toggler"
@@ -84,7 +81,46 @@ const HeaderNavbar = () => {
             </div>
           </div>
         </nav>
-      </section>
+      </section> */}
+        <nav class="navbar navbar-expand-lg navbar-light mb-3">
+  <div class="container-fluid">
+    <a class="navbar-brand name" href="#">Favy.com</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/productlist">Products</a>
+        </li>
+         <li class="nav-item">
+          <a class="nav-link" href="/about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact">Contact</a>
+        </li>
+        <li>
+        <NavLink
+                    className="nav-link ms-6 px-2  border-0"
+                    exact
+                    to="/cart"
+                  >Cart
+                           <HiOutlineShoppingCart />
+                    <sup>{quan}</sup>
+                  </NavLink>
+        </li>
+      </ul>
+      <form class="d-flex  searchitem">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+        <i class="fa fa-search"></i>
+      </form>
+    </div>
+  </div>
+</nav>
+    
     </>
   );
 };

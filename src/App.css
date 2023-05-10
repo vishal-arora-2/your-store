@@ -47,62 +47,105 @@
   margin-top: 15px;
   background-position: center;
 }
-.contact-form{
-  background: #fff;
-  margin-top: 10%;
-  margin-bottom: 5%;
-  width: 70%;
+.newp {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+  /* background: #eee; */
 }
-.contact-form .form-control{
-  border-radius:1rem;
-}
-.contact-image{
-  text-align: center;
-}
-.contact-image img{
-  border-radius: 6rem;
-  width: 11%;
-  margin-top: -3%;
-  transform: rotate(29deg);
-}
-.contact-form form{
-  padding: 14%;
-}
-.contact-form form .row{
-  margin-bottom: -7%;
-}
-.contact-form h3{
-  margin-bottom: 8%;
-  margin-top: -10%;
-  text-align: center;
-  color: #0062cc;
-}
-.contact-form .btnContact {
-  width: 50%;
-  border: none;
-  border-radius: 1rem;
-  padding: 1.5%;
-  background: #dc3545;
-  font-weight: 600;
-  color: #fff;
-  cursor: pointer;
-}
-.btnContactSubmit
-{
-  width: 50%;
-  border-radius: 1rem;
-  padding: 1.5%;
-  color: #fff;
-  background-color: #0062cc;
-  border: none;
-  cursor: pointer;
-}
-.bod{
-  
-    background: -webkit-linear-gradient(left, #0072ff, #00c6ff);
 
+.effect1 {
+  color: #222;
+  text-decoration: none;
+  font-family: sans-serif;
+  font-size: 16px;
+  position: relative;
+  padding: 10px 50px 10px 20px;
+
+  -webkit-transition: all 0.3s;
+
+  -o-transition: all 0.3s;
+
+  transition: all 0.3s;
+
+  -webkit-transform: scale(0.8);
+
+      -ms-transform: scale(0.8);
+
+          transform: scale(0.8); /*change scale(3) to scale(1)*/
 }
-.cp{
-  background-image: url("https://img.freepik.com/premium-photo/contact-us-hand-man-holding-mobile-smartphone-with-phone-email-chat-icon-cutomer-support-concept-gray-wide-banner_256259-2770.jpg");
-  background-repeat: no-repeat;
+
+.effect1 .bg {
+  background: #222;
+  width: 25px;
+  height: 2px;
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  margin-top: -1px;
+  z-index: -1;
+
+  -webkit-transition: all 0.3s;
+
+  -o-transition: all 0.3s;
+
+  transition: all 0.3s;
+}
+
+.effect1:hover {
+  padding-right: 20px;
+  color: #fff;
+}
+
+.effect1:hover .bg {
+  height: 100%;
+  width: 100%;
+  -webkit-transform: translate(0, -50%);
+      -ms-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+}
+
+.effect1 .bg:before, .effect1 .bg:after {
+  content: '';
+  height: 2px;
+  width: 10px;
+  background: #222;
+  position: absolute;
+  right: -2px;      
+  -webkit-transition: all 0.3s;      
+  -o-transition: all 0.3s;      
+  transition: all 0.3s;
+}
+
+.effect1 .bg:before {
+  bottom: 3px;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.effect1 .bg:after{
+  top: 3px;
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.effect1:hover .bg:before,
+.effect1:hover .bg:after{
+  right: 0;
+}
+
+.effect1:hover .bg:before{
+  bottom: 6px;
+}
+
+.effect1:hover .bg:after{
+  top: 6px;
 }
