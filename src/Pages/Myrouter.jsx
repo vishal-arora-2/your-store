@@ -9,6 +9,7 @@ import ProductList from "./ProductList";
 import CartReview from "./CartReview";
 import Products from "./Products";
 import Contact from "./Contact";
+import Search from "./Search";
 const Myrouter = () => {
   return (
     <div>
@@ -22,6 +23,7 @@ const Myrouter = () => {
           <Route path="/productlist" element={<ProductList />} />
           <Route path="/cartreview" element={<CartReview />} />
           <Route path="/product/:id" element={<Products />} />
+          <Route path="/search" element={<Search/>}></Route>
         </Routes>
         <Footer />
       </BrowserRouter>

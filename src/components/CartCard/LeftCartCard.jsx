@@ -1,6 +1,7 @@
 import React from 'react'
 import { useDispatch} from 'react-redux';
 import { cartActions } from '../../slice/cartSlice';
+
 const TestCard = (props) => {
   var q = props.b.quantity;
   var a = props.b;
@@ -69,8 +70,8 @@ const TestCard = (props) => {
           
         </div>
       </div>
-    
-      <hr className="my-4" />
+     
+      <hr className="my-3" />
     </div>
     </>
   )
