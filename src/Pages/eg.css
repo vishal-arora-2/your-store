@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0
+}
+
+.body1{
+    background-color: #a4a8e7
+    
+    /* background-color: white; */
+}
+
+.name {
+    font-size: 18px;
+    color: #eeeded !important;
+    font-weight: 500
+}
+
+.navbar-toggler {
+    font-size: 15px
+}
+
+.nav-link {
+    font-size: 16px;
+    color: #ffffff !important;
+    font-weight: bold;
+    margin-left: 40px
+}
+.nav-link:hover{
+    background-color:"black";
+}
+
+.form-control {
+    height: 32px;
+    width: 100%;
+    border-radius: 20px;
+    color: #c7c6cb;
+    font-size: 13px;
+    border: none
+}
+
+.searchitem {
+    position: relative
+}
+
+.searchitem i {
+    position: absolute;
+    right: 18px;
+    top:10px;
+    font-size: 13px
+}
+
+.homebtn {
+    height: 35px;
+    width: 170px;
+    border: none;
+    border-radius: 20px;
+    background-color: #633a9c;
+    font-size: 14px;
+    font-weight: 500
+}
+
+.text {
+    font-size: 23px;
+    font-weight: bold
+}
+
+.cardhome {
+    height: 130px;
+    overflow:hidden;
+    border: none;
+    border-radius: 15px
+}
+
+.imagename {
+    font-size: 14px;
+    font-weight: bold
+}
+.card1{
+
+    transition: all 0.2s ease;
+    cursor: pointer;
+  }
+    
+
+
+.card1:hover{
+
+    box-shadow: 2px 3px 3px 2px #414040;
+    transform: scale(1.0);
+}
+
+.an {
+    color: #18272F;
+    position: relative;
+    text-decoration: none;
+  }
+  
+  .an::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    border-radius: 4px;
+    background-color: #ffffff;
+    bottom: 0;
+    left: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .3s ease-in-out;
+  }
+  
+ .an:hover::before {
+    transform-origin: left;
+    transform: scaleX(1);
+  }
+  

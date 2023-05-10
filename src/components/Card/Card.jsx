@@ -4,6 +4,7 @@ import Card from "react-bootstrap/Card";
 import { NavLink } from "react-router-dom";
 import { cartActions } from "../../slice/cartSlice";
 import { useDispatch, useSelector } from "react-redux";
+import "../../Pages/eg.css"
 import {BsFillBagPlusFill} from 'react-icons/bs';
 const CardComponent = (props) => {
   const [quantity, setQuantity] = useState(0);
@@ -27,28 +28,23 @@ const CardComponent = (props) => {
   };
   return (
     <div className="m-2" style={{ display: "inline-block" }}>
-      <Card style={{ width: "13rem" }}>
+      <Card style={{ width: "13rem", borderRadius:"15px" }} className="m-3 card1">
       <NavLink to={`/product/${id}`}>  
-      <Card.Img variant="top" src={image} style={{ height: "13rem",padding:"24px" }} /> </NavLink> 
+      <Card.Img variant="top" src={image} style={{ height: "13rem",padding:"36px" }} /> </NavLink> 
 
         <Card.Body>
-          <Card.Title className="font-weight-normal mb-1 text-truncate">
+          <Card.Title style={{fontFamily:"sans-serif"}} className="font-weight-normal mb-1 text-truncate">
             {title}
           </Card.Title>
           <Card.Text className="font-weight-bold">{`$${price}`}</Card.Text>
           {!quantity ? (
             // <div>
-            //   <Button onClick={addToCart} variant="muted"className="btn btn-outline-dark" style={{marginLeft:"28px"}}>
-            //   Add now <BsFillBagPlusFill/>
+            //   <Button onClick={addToCart} variant="muted"className="btn btn-outline-dark px-3" style={{marginLeft:"28px"}}>
+            //   Add now
+            //    {/* <BsFillBagPlusFill/> */}
                 
-            //   </Button>
-            // </div>
-            <div className="newp">
-  <button class="effect1" onClick={addToCart} style={{borderRadius:"5px"}}>
-    Add to Cart
-    <span class="bg"></span>
-  </button>
-</div>
+              </Button>
+            </div>
           ) : (
 
 

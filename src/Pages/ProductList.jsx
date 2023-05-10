@@ -5,6 +5,7 @@ import FilterSection from "../components/FilterSection";
 const ProductList = () => {
   const [data, setData] = useState([]);
   const [filter, setFilter] = useState(data);
+  const [priceFilter, setPriceFilter] = useState(data);
   const getProducts = async () => {
     try {
       const response = await axios.get("https://fakestoreapi.com/products");
@@ -17,6 +18,11 @@ const ProductList = () => {
   useEffect(() => {
     getProducts();
   }, []);
+  const filterPrice = (cost) => {
+    const updateprice = data.filter((x) => x.price <= cost);
+
+    setFilter(updateprice);
+  };
   const filterProduct = (cat) => {
     const updateList = data.filter((x) => x.category === cat);
     setFilter(updateList);
@@ -25,51 +31,12 @@ const ProductList = () => {
     <div className="container-fluid">
       <div className="row">
         <div className="col-md-2">
-          <FilterSection />
-          <div className="buttons dflex justift-content-centre mb-5 pb-5">
-            <ul>
-              <li>
-                <button
-                  className="btn btn-outline-dark me-2 mb-1"
-                  onClick={() => setFilter(data)}
-                >
-                  All
-                </button>
-              </li>
-              <li>
-                <button
-                  className="btn btn-outline-dark me-2 mb-1"
-                  onClick={() => filterProduct("men's clothing")}
-                >
-                  Men's Clothing
-                </button>
-              </li>
-              <li>
-                <button
-                  className="btn btn-outline-dark me-2 mb-1"
-                  onClick={() => filterProduct("women's clothing")}
-                >
-                  Women's Clothing
-                </button>
-              </li>
-              <li>
-                <button
-                  className="btn btn-outline-dark me-2 mb-1"
-                  onClick={() => filterProduct("jewelery")}
-                >
-                  Jewelery
-                </button>
-              </li>
-              <li>
-                <button
-                  className="btn btn-outline-dark me-2 mb-1"
-                  onClick={() => filterProduct("electronics")}
-                >
-                  Electronics
-                </button>
-              </li>
-            </ul>
-          </div>
+          <FilterSection
+            filterPrice={filterPrice}
+            filterProduct={filterProduct}
+            data={data}
+            setFilter={setFilter}
+          />
         </div>
 
         <div className="col-md-10">

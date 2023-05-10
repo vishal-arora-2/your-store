@@ -4,7 +4,9 @@ const initialState = {
   cartItems: localStorage.getItem("cartItems")
     ? JSON.parse(localStorage.getItem("cartItems"))
     : [],
-  totalQuantity: 0,
+    totalQuantity: localStorage.getItem("totalQuantity")
+    ? JSON.parse(localStorage.getItem("totalQuantity"))
+    : 0,
 };
 
 
@@ -29,6 +31,7 @@ const cartSlice = createSlice({
           Number(existingItem.totalPrice) + Number(newItem.price);
       }
       localStorage.setItem("cartItems", JSON.stringify(state.cartItems));
+      localStorage.setItem("totalQuantity", JSON.stringify(state.totalQuantity));
     },
     removeFromCart(state,action){
       var s=0
@@ -41,12 +44,15 @@ const cartSlice = createSlice({
         state.cartItems = nextCartItems;
         state.totalQuantity = s;
         localStorage.setItem("cartItems", JSON.stringify(state.cartItems));
+        localStorage.setItem("totalQuantity", JSON.stringify(state.totalQuantity));
         return state;
     },
     removeAllFromcart(state,action){ 
       state.cartItems=[]
-      localStorage.setItem("cartItems", JSON.stringify(state.cartItems));
       state.totalQuantity=0;
+      localStorage.setItem("cartItems", JSON.stringify(state.cartItems));
+      localStorage.setItem("totalQuantity", JSON.stringify(state.totalQuantity));
+
     },
     decreaseCart(state,action){
       const indexItem= state.cartItems.findIndex(
@@ -68,6 +74,7 @@ const cartSlice = createSlice({
             state.totalQuantity = s;
         }
         localStorage.setItem("cartItems", JSON.stringify(state.cartItems));
+        localStorage.setItem("totalQuantity", JSON.stringify(state.totalQuantity));
     },
   },
   
