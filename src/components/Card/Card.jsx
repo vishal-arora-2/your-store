@@ -37,12 +37,18 @@ const CardComponent = (props) => {
           </Card.Title>
           <Card.Text className="font-weight-bold">{`$${price}`}</Card.Text>
           {!quantity ? (
-            <div>
-              <Button onClick={addToCart} variant="muted"className="btn btn-outline-dark" style={{marginLeft:"28px"}}>
-              Add now <BsFillBagPlusFill/>
+            // <div>
+            //   <Button onClick={addToCart} variant="muted"className="btn btn-outline-dark" style={{marginLeft:"28px"}}>
+            //   Add now <BsFillBagPlusFill/>
                 
-              </Button>
-            </div>
+            //   </Button>
+            // </div>
+            <div className="newp">
+  <button class="effect1" onClick={addToCart} style={{borderRadius:"5px"}}>
+    Add to Cart
+    <span class="bg"></span>
+  </button>
+</div>
           ) : (
 
 
