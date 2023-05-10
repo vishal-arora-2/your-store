@@ -41,13 +41,13 @@ const Carousel = () => {
 
     </div>
    
-<NavLink to="/productlist" style={{textDecoration:"none"}}><div className='backi mb-3'>
+{/* <NavLink to="/productlist" style={{textDecoration:"none"}}><div className='backi'>
 <marquee><p style={{color:'black'}}><b>SALE ON PRODUCTS THIS FESTIVE SEASON, UPTO 90% SALE ON EXCLUSIVE BRANDS !!!</b></p>
    </marquee>
    <h6 style={{marginLeft:"700px",marginTop:"190px",color:"black"}}><b>Click here to get amazing deals ... </b></h6>
 
 </div>
-</NavLink>
+</NavLink> */}
 </>
 
   )

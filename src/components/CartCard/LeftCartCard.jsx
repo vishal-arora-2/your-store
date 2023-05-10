@@ -1,6 +1,7 @@
 import React from 'react'
 import { useDispatch} from 'react-redux';
 import { cartActions } from '../../slice/cartSlice';
+
 const TestCard = (props) => {
   var q = props.b.quantity;
   var a = props.b;
@@ -37,7 +38,7 @@ const TestCard = (props) => {
         </div>
 
         <div className="col-lg-5 col-md-6 mb-4 mb-lg-0">
-          <h4><strong>{props.b.title}</strong></h4>
+          <display4><strong>{props.b.title}</strong></display4>
           <p>{props.b.category}</p>
           <button type="button" onClick={()=> handleRemoveFromCart(props.b)} className="btn btn-danger btn-sm me-1 mb-2" data-mdb-toggle="tooltip"
             title="Remove item">
@@ -69,8 +70,8 @@ const TestCard = (props) => {
           
         </div>
       </div>
-    
-      <hr className="my-4" />
+     
+      <hr className="my-3" />
     </div>
     </>
   )

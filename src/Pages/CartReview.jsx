@@ -28,7 +28,7 @@ const CartReview = () => {
             <div class="col-md-5 col-lg-4 order-md-last">
             <h4 class="d-flex justify-content-between align-items-center mb-3">
                 <span class="text-info">Your cart</span>
-                <span class="badge bg-dark rounded-pill">{tot}</span>
+                <span class="badge bg-dark rounded-pill">{tot} Items</span>
             </h4>
           {details.map((item) => {
                 return <CartReviewCard item={item} />;
@@ -41,7 +41,7 @@ const CartReview = () => {
                     <div class="row g-3">
                         <div class="col-sm-6">
                             <label for="firstName" class="form-label">First name</label>
-                            <input type="text" class="form-control" id="firstName" placeholder="" value="" required/>
+                            <input type="text" class="form-control  border" id="firstName" placeholder="" value="" required/>
                             <div class="invalid-feedback">
                                 Valid first name is required.
                             </div>
@@ -49,7 +49,7 @@ const CartReview = () => {
     
                         <div class="col-sm-6">
                             <label for="lastName" class="form-label">Last name</label>
-                            <input type="text" class="form-control" id="lastName" placeholder="" value="" required/>
+                            <input type="text" class="form-control border" id="lastName" placeholder="" value="" required/>
                             <div class="invalid-feedback">
                                 Valid last name is required.
                             </div>
@@ -58,7 +58,7 @@ const CartReview = () => {
     
                         <div class="col-12">
                             <label for="email" class="form-label">Email <span class="text-muted">(Optional)</span></label>
-                            <input type="email" class="form-control" id="email" placeholder="you@example.com"/>
+                            <input type="email" class="form-control border" id="email" placeholder="you@example.com"/>
                             <div class="invalid-feedback">
                                 Please enter a valid email address for shipping updates.
                             </div>
@@ -66,7 +66,7 @@ const CartReview = () => {
     
                         <div class="col-12">
                             <label for="address" class="form-label">Address</label>
-                            <input type="text" class="form-control" id="address" placeholder="Plaza street" required/>
+                            <input type="text" class="form-control border" id="address" placeholder="Plaza street" required/>
                             <div class="invalid-feedback">
                                 Please enter your shipping address.
                             </div>
@@ -78,7 +78,7 @@ const CartReview = () => {
                                 <option value="">Choose...</option>
                                 <option>India</option>
                             </select>
-                            <div class="invalid-feedback">
+                            <div class="invalid-feedback  border border-dark">
                                 Please select a valid country.
                             </div>
                         </div>
