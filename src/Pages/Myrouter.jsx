@@ -10,6 +10,7 @@ import CartReview from "./CartReview";
 import Products from "./Products";
 import Contact from "./Contact";
 import Search from "./Search";
+import Payment from "./Payment";
 const Myrouter = () => {
   return (
     <div>
@@ -24,6 +25,7 @@ const Myrouter = () => {
           <Route path="/cartreview" element={<CartReview />} />
           <Route path="/product/:id" element={<Products />} />
           <Route path="/search" element={<Search/>}></Route>
+          <Route path="/payment" element={<Payment/>}></Route>
         </Routes>
         <Footer />
       </BrowserRouter>

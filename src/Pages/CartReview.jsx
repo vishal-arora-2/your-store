@@ -3,6 +3,7 @@ import { useSelector } from "react-redux";
 import Total from "../components/CartCard/RightTotal";
 import {MdShoppingCartCheckout} from 'react-icons/md'
 import CartReviewCard from "../components/CartReviewCard/CartReviewCard";
+import { NavLink } from "react-router-dom";
 
 const CartReview = () => {
   const [details, setDetails] = useState([]);
@@ -115,7 +116,10 @@ const CartReview = () => {
                         <label class="form-check-label" for="save-info">Save this information for next time</label>
                     </div>
                     <hr class="my-4"/>
-                    <button class="w-100 btn btn-success btn-md" type="submit">Continue to Payment</button>
+                      <NavLink to="/payment">
+                      <button class="w-100 btn btn-success btn-md" type="submit">Continue to Payment</button>
+                    </NavLink>
+                    
                 </form>
             </div>
         </div>
