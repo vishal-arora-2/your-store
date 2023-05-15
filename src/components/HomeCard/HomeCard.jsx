@@ -206,36 +206,66 @@ const HomeCard = (props) => {
         );
     }
 
-
     return (
+        <div id="carouselExampleControls" class="carousel carousel-dark slide" data-bs-ride="carousel">
+            <div class="carousel-inner" >
+                <div class="carousel-item active" >
 
 
-        <div>
-            <div>
-                <div style={{ height: "8px" }}>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#a2d9ff" fill-opacity="0.6" d="M0,288L80,256C160,224,320,160,480,144C640,128,800,160,960,154.7C1120,149,1280,107,1360,85.3L1440,64L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path></svg>
+                    <div class="row" style={{marginLeft:"40px", marginRight:"40px"}}>
+
+                        <div class="col">
+                            <CardComponent data={prod7} />
+                        </div>
+
+                        <div class="col">
+                            <CardComponent data={prod1} />
+                        </div>
+
+
+                        <div class="col">
+                            <CardComponent data={prod2} />
+                        </div>
+                        <div class="col">
+                            <CardComponent data={prod6} />
+                        </div>
+
+                    </div>
                 </div>
 
-                <div className="mx-4 mt-4" style={{ color: 'black' }}><h4 className='display-6'> Explore Best of {props.name}...</h4>
+                <div class="carousel-item">
+                    <div class="row" style={{marginLeft:"40px", marginRight:"40px"}}>
+
+                        <div class="col">
+                            <CardComponent data={prod3} />
+                        </div>
+
+                        <div class="col">
+
+                            <CardComponent data={prod4} />
+                        </div>
+
+
+                        <div class="col">
+                            <CardComponent data={prod5} />
+                        </div>
+
+                        <div class="col" >
+                            <CardComponent data={prod6} />
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-5 g-5 p-5">
-
-                <div class="col">
-                    { flag ? <CardComponent data={prod5} /> : <CardComponent data={prod1} /> }
-                </div>
-                <div class="col">
-                    {flag ? <CardComponent data={prod6}/> : <CardComponent data={prod2} />}
-                </div>
-                <div class="col">
-                    {flag ? <CardComponent data={prod7} /> : <CardComponent data={prod3} />}
-                </div>
-                <div class="col">
-                    {flag ? <CardComponent data={prod8} /> : <CardComponent data={prod4} />}
-                </div>
-                <button onClick={arroHandler}><AiOutlineArrowRight /></button>
-            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev" >
+                <span class="carousel-control-prev-icon" aria-hidden="true" style={{marginRight:"70px"}}></span>
+                <span class="visually-hidden" >Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next" >
+                <span class="carousel-control-next-icon" aria-hidden="true" style={{marginLeft:"50px"}}></span>
+                <span class="visually-hidden" >Next</span>
+            </button>
         </div>
+
 
     )
 }
