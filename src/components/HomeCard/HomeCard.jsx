@@ -256,11 +256,11 @@ const HomeCard = (props) => {
                     </div>
                 </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev" >
+            <button class="carousel-control-prev" style={{width:"fit-content", paddingLeft:"10px"}} type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev" >
                 <span class="carousel-control-prev-icon" aria-hidden="true" style={{marginRight:"70px"}}></span>
                 <span class="visually-hidden" >Previous</span>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next" >
+            <button class="carousel-control-next" style={{width:"fit-content", paddingRight:"10px"}} type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next" >
                 <span class="carousel-control-next-icon" aria-hidden="true" style={{marginLeft:"50px"}}></span>
                 <span class="visually-hidden" >Next</span>
             </button>
