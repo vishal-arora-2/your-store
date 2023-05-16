@@ -1,22 +1,22 @@
-import {React ,useState,useEffect} from "react";
+import { React, useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { HiOutlineShoppingCart } from "react-icons/hi";
 import { BsAsterisk } from "react-icons/bs";
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { useSearchParams } from "react-router-dom";
-import './eg.css'
+import "./eg.css";
 const HeaderNavbar = () => {
   const quan = useSelector((state) => {
     return state.cart.totalQuantity;
   });
 
-  const [searchText, setSearchText] = useState("")
+  const [searchText, setSearchText] = useState("");
   const [query, setQuery] = useSearchParams();
 
   useEffect(() => {
-    setSearchText(query.get('q'))
-  }, [query.get('q')])
+    setSearchText(query.get("q"));
+  }, [query.get("q")]);
 
   var nav = useNavigate();
 
@@ -27,7 +27,6 @@ const HeaderNavbar = () => {
   function searchUpdate(e) {
     e.preventDefault();
     nav(`/search?q=${searchText}`);
-
   }
   return (
     <>
@@ -102,46 +101,69 @@ const HeaderNavbar = () => {
           </div>
         </nav>
       </section> */}
-        <nav class="navbar navbar-expand-lg navbar-light mb-3v body1">
-  <div class="container-fluid">
-    <a class="navbar-brand name text-light" href="/">CARTit</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active an" style={{color:"white"}} aria-current="page" href="/"><span> Home</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link an" href="/productlist">Products</a>
-        </li>
-         <li class="nav-item">
-          <a class="nav-link an" href="/about">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link an" href="contact">Contact</a>
-        </li>
-        <li className="" style={{marginLeft:"380px"}}>
-        <NavLink
-                    className="nav-link ms-6 px-2 border-0"
-                    exact
-                    to="/cart"
-                  >Cart
-                           <HiOutlineShoppingCart />
-                    <sup>{quan}</sup>
-                  </NavLink>
-        </li>
-      </ul>
-      <form class="d-flex  searchitem">
-        <input class="form-control me-2" type="search" placeholder="Search"  onChange={getText}
-                value={searchText} aria-label="Search"/>
-        <i type="button" onClick={searchUpdate} class="fa fa-search"></i>
-      </form>
-    </div>
-  </div>
-</nav>
-    
+      <nav class="navbar navbar-expand-lg navbar-light mb-3v body1">
+        <div class="container-fluid">
+          <a class="navbar-brand name text-light" href="/">
+            CARTit
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a
+                  class="nav-link active an"
+                  style={{ color: "white" }}
+                  aria-current="page"
+                  href="/"
+                >
+                  <span> Home</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link an" href="/productlist">
+                  Products
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link an" href="/about">
+                  About
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link an" href="contact">
+                  Contact
+                </a>
+              </li>
+            </ul>
+            <form class="d-flex  searchitem">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Search"
+                onChange={getText}
+                value={searchText}
+                aria-label="Search"
+              />
+              <i type="button" onClick={searchUpdate} class="fa fa-search"></i>
+            </form>
+            <NavLink className="nav-link ms-6 px-2 border-0" exact to="/cart">
+              Cart
+              <HiOutlineShoppingCart />
+              <sup>{quan}</sup>
+            </NavLink>
+          </div>
+        </div>
+      </nav>
     </>
   );
 };
