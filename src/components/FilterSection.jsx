@@ -55,7 +55,9 @@ const FilterSection = (props) => {
         <h6>Price</h6>
         <hr />
         <ul>
-          <p className="m-0">${price}</p>
+          <p className="m-0" data-testid="id">
+            ${price}
+          </p>
           <input
             name="price"
             type="range"
