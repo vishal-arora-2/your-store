@@ -28,34 +28,8 @@ const Payment = (props) => {
     const [details, setdetails] = useState([]);
      const [one ,setone] = useState();
      const [two ,settwo] = useState();
-    // var [flag, setFlag] = useState(false);
-    // var [f1, setf1] = useState();
-    // var [f2, setf2] = useState();
-    // var [cross,setCross] = useState(true)
-    // var [total, settotal] = useState();
-    // var [distotal, setdistotal] = useState();
-    // const data = useSelector((state) => {
-    //   return state.cart.cartItems;
-    // });
-    // useEffect(() => {
-    //   setdetails(data);
-    //   let sum = 0;
-  
-    //   details?.map((item) => {
-    //     sum = sum + item.price * item.quantity;
-    //   });
-    //   localStorage.setItem("totalAmt", sum);
-    //   settotal(sum.toFixed(2));
-  
-    //   if (flag) {
-    //     var showTotal = localStorage.getItem("totalAmt")
-    //     var redPrice = (showTotal * 5) / 100
-    //     showTotal -= redPrice
-    //     setdistotal(showTotal.toFixed(2));
-    //     localStorage.setItem("totalAmt", showTotal)
-    //   }
-    // });
-  
+   
+   
       const fire =() => {
       setone(true);
       };
@@ -67,18 +41,22 @@ const Payment = (props) => {
         text: "Your Order Has been placed!",
         icon: "success",
         buttons: {
+          target: '#custom-target',
           confirm: {
             text: "Confirm Me",
             value: true,
             visible: true,
             className: "btn btn-success",
-            closeModal: true
+            closeModal: true,
+          
           }
-          // ,Navigate('/'),
-        } 
+      
+        }
+        
+      }).then(function(){
+        Navigate("/")
       });
-    
-        };
+    };
         var showTotal = localStorage.getItem("totalAmt")
 
     return (
@@ -89,12 +67,12 @@ const Payment = (props) => {
         <div class="card mb-5  shadow p-3 mb-5 bg-white rounded" >
           <div class="card-header py-3">
             <h5 class="mb-0"><FaDollarSign/> Payment Options</h5>
-          <div className='mt-4 mb-2 shadow p-3 mb-5 bg-white rounded'>  <input type="radio" value="card" disabled  /> &nbsp;&nbsp;<FaCreditCard/> &nbsp;&nbsp; Debit/Credit</div>
-          <div  className='mb-2 shadow p-3 mb-5 bg-white rounded'>  <input type="radio" value="cartit" disabled  /> CartIT Credits</div>
+          <div className='mt-4 mb-2 shadow p-3 mb-5 bg-white rounded'>  <input type="radio" value="card"  disabled  /> &nbsp;&nbsp;<FaCreditCard/> &nbsp;&nbsp; Debit/Credit</div>
+          <div  className='mb-2 shadow p-3 mb-5 bg-white rounded'>  <input type="radio" value="cartit" disabled   /> CartIT Credits</div>
           <div  className='shadow p-3 mb-5 bg-white rounded'>  <input type="radio" onChange= {fire} value="cod"/> &nbsp;&nbsp;<BsCashCoin/> &nbsp;&nbsp;Cash On Delivery </div>
           { !one ? (
             
-                   <button  className="add-to-cart-button"/>
+                   <span></span>
                    ) : (
                    <button  className="btn btn-success" onClick={confirm}>Confirm
                    {
@@ -105,7 +83,7 @@ const Payment = (props) => {
                         tweenDuration={1000}
                         />
                     ):(
-                      <button/>
+                     <span></span>
                     )
                    }
                    </button>
