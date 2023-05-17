@@ -56,9 +56,12 @@ describe("test of Filter Section Page", () => {
 
 describe("testing button", () => {
   test("Button Click", () => {
+    const setFilter = jest.fn();
     const { getByText, getByTestId } = render(
       <Provider store={store}>
-        <FilterSection />
+        <FilterSection
+          setFilter={setFilter}
+        />
       </Provider>
     );
     expect(getByText("Clear Filters")).toBeTruthy();
