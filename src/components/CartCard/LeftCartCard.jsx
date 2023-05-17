@@ -1,6 +1,8 @@
 import React from 'react'
+import { icons } from 'react-icons';
 import { useDispatch} from 'react-redux';
 import { cartActions } from '../../slice/cartSlice';
+import {RiDeleteBinLine} from 'react-icons/ri'
 
 const TestCard = (props) => {
   var q = props.b.quantity;
@@ -24,10 +26,10 @@ const TestCard = (props) => {
     <>
     <div className="card-body">
     
-      <div className="row">
-        <div className="col-lg-3 col-md-12 mb-4 mb-lg-0">
+      <div className="row" >
+        <div className="col-lg-3 col-md-12 mb-4 mb-lg-0" >
         
-          <div className="bg-image hover-overlay hover-zoom ripple rounded" data-mdb-ripple-color="light">
+          <div className="bg-image hover-overlay hover-zoom ripple rounded" data-mdb-ripple-color="light" >
             <img src={props.b.image}
               className="w-75" alt="no img" />
             <a href="#!">
@@ -37,12 +39,12 @@ const TestCard = (props) => {
 
         </div>
 
-        <div className="col-lg-5 col-md-6 mb-4 mb-lg-0">
+        <div className="col-lg-5 col-md-6 mb-4 mb-lg-0" >
           <display4><strong>{props.b.title}</strong></display4>
           <p>{props.b.category}</p>
-          <button type="button" onClick={()=> handleRemoveFromCart(props.b)} className="btn btn-danger btn-sm me-1 mb-2" data-mdb-toggle="tooltip"
-            title="Remove item">
-            <i className="fas fa-trash"></i>
+          <button type="button" onClick={()=> handleRemoveFromCart(props.b)} className="me-1 mb-2" data-mdb-toggle="tooltip"
+            title="Remove item" style={{backgroundColor:"white",border:"0px"}}>
+            <i style={{fontSize:"19px",color:"red"}}> <RiDeleteBinLine/></i>
           </button>
           {/* <button type="button" className="btn btn-danger btn-sm mb-2" data-mdb-toggle="tooltip"
             title="Move to the wish list">
@@ -50,7 +52,7 @@ const TestCard = (props) => {
           </button> */}
         </div>
 
-        <div className="col-lg-4 col-md-6 mb-4 mb-lg-0">
+        <div className="col-lg-4 col-md-6 mb-4 mb-lg-0" >
             
           <div className="d-flex mb-4" style={{maxWidth: "300px"}}>
             <button className="btn btn-dark px-3 ms-2" style={{height:"40px"}}
