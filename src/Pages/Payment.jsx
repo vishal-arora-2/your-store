@@ -8,7 +8,7 @@ import { useDispatch } from "react-redux";
 import { render } from '@testing-library/react';
 import ReactConfetti from 'react-confetti';
 import { cartActions } from '../slice/cartSlice';
-import { useNavigate } from 'react-router';
+import { useNavigate } from 'react-router-dom/dist';
 
 
 const Payment = (props) => {
