@@ -31,6 +31,8 @@ const Products = () => {
       setQuantity(quantity + 1);
       dispatch(cartActions.addItem(data, quantity));
       console.log(data);
+     
+
     };
     const cart = useSelector((state) => {
       return state.cart;
@@ -81,7 +83,7 @@ const Products = () => {
                    ) : (
                    <div className="quantity-buttons">
                      <span onClick={minusHandeler}>-</span>
-                     <span>{quantity}</span>
+                     <span data-testid ="quant">{quantity}</span>
                      <span  onClick={plusHandeler}>+</span>
                    </div>
                

@@ -46,6 +46,7 @@ describe("Testing Card Component", () => {
     const quantity = getByTestId("quant");
     expect(quantity.textContent).toBe("2");
   });
+
   test("Button click minusHandeler ", () => {
     const { getByTestId, getByText } = render(
       <Provider store={store}>
@@ -57,4 +58,5 @@ describe("Testing Card Component", () => {
     const quantity = getByTestId("altquant");
     expect(quantity.textContent).toBe("$undefined");
   });
+
 });
