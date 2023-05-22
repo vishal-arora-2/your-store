@@ -105,7 +105,7 @@ const Total = (props) => {
                   </span>
                 </li>
                 <li className="list-group-item d-flex justify-content-between align-items-center border-0 px-0 mb-3">
-                  <div>
+                  <div data-testid="totalamountincgst">
                     <strong>Total amount</strong>
                     <strong>
                       <p className="mb-0">(including GST)</p>
@@ -201,11 +201,12 @@ const Total = (props) => {
           ) : (
             <>
               <a href="/cartreview" style={{ textDecoration: "none" }} data-testid='move'>
-                <button type="button1" className="btn button btn-dark btn-lg btn-block">
-                  Go to checkout
-                </button>
-              </a>
-              <button
+                 <div className="a">
+                    <span>Checkout <MdOutlineShoppingCartCheckout /></span>
+                    <div class="liquid"></div>
+                  </div>
+                </a>
+              {/* <button
                 type="button"
                 className="btn button2 btn-danger btn-lg btn-block"
                 style={{ marginTop: "10px" }}
@@ -213,7 +214,14 @@ const Total = (props) => {
                 data-testid='clearcart'
               >
                 Clear Cart
-              </button>
+              </button> */}
+                
+              <button onClick={props.removeallfromcart} style={{backgroundColor:"white",border:"0px"}} data-testid='clearcart'>
+                 <div className="b" style={{ marginTop: "10px" }}>
+                    <span>Clear cart  <BsMinecartLoaded/></span>
+                    <div class="liquid"></div>
+                  </div>
+                </button>
             </>
           )}
         </div>

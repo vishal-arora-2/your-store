@@ -74,7 +74,7 @@ const Products = () => {
             
                    <div className="cart-buttons"> 
                    {!quantity ? (
-                   <button onClick={addToCart} className="add-to-cart-button" data-testid="addtocart">
+                   <button onClick={addToCart} className="add-to-cart-button" data-testid="addtocartbtn">
                      <FaCartPlus size={20} />
                      ADD TO CART
                    </button> 

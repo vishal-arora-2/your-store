@@ -55,7 +55,7 @@ const CartCard = (props) => {
         <section className="h-100 gradient-custom">
           <div className="container py-5">
             <div className="row d-flex justify-content-center my-4">
-              <div className="col-md-8">
+              <div className="col-md-8" style={{maxHeight:"77vh", overflowY:"auto"}}>
                 <div className="card mb-4">
                   <div className="card-header py-3">
                     <h5 className="mb-0">Shopping Cart</h5>
