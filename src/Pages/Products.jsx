@@ -83,7 +83,7 @@ const Products = () => {
                    ) : (
                    <div className="quantity-buttons">
                      <span onClick={minusHandeler}>-</span>
-                     <span>{quantity}</span>
+                     <span data-testid ="quant">{quantity}</span>
                      <span  onClick={plusHandeler}>+</span>
                    </div>
                
