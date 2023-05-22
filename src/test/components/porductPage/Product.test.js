@@ -5,20 +5,20 @@ import store from "../../../store";
 
 describe("test of Product Section Page", () => {
   test("Add to Cart Button", () => {
-    const { getByTestId } = render(
+    const { getByText } = render(
       <Provider store={store}>
         <Products />
       </Provider>
     );
-    expect(getByTestId("addtocartbtn")).toBeInTheDocument();
+    expect(getByText("Add to Cart")).toBeTruthy();
   });
   test("Add to Cart Button On Click", () => {
-    const { getByTestId } = render(
+    const { getByTestId, getByText } = render(
       <Provider store={store}>
-        <Products />
+        <Products data={data} />
       </Provider>
     );
-    fireEvent.click(getByTestId("addtocartbtn"));
+    fireEvent.click(getByText("Add to Cart"));
     const quantity = getByTestId("quant");
     expect(quantity.textContent).toBe("1");
   });
