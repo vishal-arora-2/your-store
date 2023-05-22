@@ -38,6 +38,5 @@ test("left card title testing", () => {
     expect(getByTestId("inputfield4")).toBeInTheDocument();
   });
 
-
 });
 
