@@ -1,4 +1,4 @@
-import { Link, NavLink } from "react-router-dom";
+// import { Link, NavLink } from "react-router-dom";
 import "./eg.css";
 import React from "react";
 import HomeCard from "../components/HomeCard/HomeCard";
@@ -33,11 +33,11 @@ const Home = () => {
       <div class="row mt-2 g-4 pb-5">
         <div class="col-md-3 ">
           <div class="card cardhome p-1 mx-2">
-            <Link
+            {/* <Link
               to="productlist"
               style={{ textDecoration: "none", color: "black" }}
-            >
-              <div class="d-flex justify-content-between align-items-center p-2">
+            > */}
+              <div class="d-flex justify-content-between align-items-center p-2" data-testid="card1">
                 <div class="flex-column lh-1 imagename">
                   <span>Electronic</span> <span>Items</span>
                 </div>
@@ -48,17 +48,17 @@ const Home = () => {
                   alt="electronic items"
                 />
               </div>
-            </Link>
+            {/* </Link> */}
           </div>
         </div>
 
         <div class="col-md-3">
           <div class="card cardhome p-2">
-            <Link
+            {/* <Link
               to="productlist"
               style={{ textDecoration: "none", color: "black" }}
-            >
-              <div class="d-flex justify-content-between align-items-center p-2">
+            > */}
+              <div class="d-flex justify-content-between align-items-center p-2" data-testid="card2">
                 <div class="flex-column lh-1 imagename">
                   <span>Mens</span> <span>Clothing</span>
                 </div>
@@ -71,17 +71,17 @@ const Home = () => {
                   />
                 </div>
               </div>
-            </Link>
+            {/* </Link> */}
           </div>
         </div>
 
         <div class="col-md-3">
           <div class="card cardhome p-2">
-            <Link
+            {/* <Link
               to="productlist"
               style={{ textDecoration: "none", color: "black" }}
-            >
-              <div class="d-flex justify-content-between align-items-center p-2">
+            > */}
+              <div class="d-flex justify-content-between align-items-center p-2" data-testid="card3">
                 <div class="flex-column lh-1 imagename">
                   <span>Womens</span> <span>Clothing</span>
                 </div>
@@ -94,17 +94,17 @@ const Home = () => {
                   />
                 </div>
               </div>
-            </Link>
+            {/* </Link> */}
           </div>
         </div>
 
         <div class="col-md-3">
           <div class="card cardhome p-2 mx-2">
-            <Link
+            {/* <Link
               to="productlist"
               style={{ textDecoration: "none", color: "black" }}
-            >
-              <div class="d-flex justify-content-between align-items-center p-2">
+            > */}
+              <div class="d-flex justify-content-between align-items-center p-2" data-testid="card4">
                 <div class="flex-column lh-1 imagename">
                   <span>Jewelery</span> <span>Items</span>
                 </div>
@@ -112,7 +112,7 @@ const Home = () => {
                   <img src={jewellery} height="90" width="80" alt="jewellery" />
                 </div>
               </div>
-            </Link>
+            {/* </Link> */}
           </div>
         </div>
       </div>
@@ -125,7 +125,7 @@ const Home = () => {
           Buy Products Now at Just One Click!
         </button>
       </div>
-      <HomeCard name="women's clothing" />
+      <HomeCard name="women's clothing"/>
     </div>
   );
 };

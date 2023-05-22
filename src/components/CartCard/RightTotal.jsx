@@ -220,7 +220,7 @@ const Total = (props) => {
                  <div className="b" style={{ marginTop: "10px" }}>
                     <span>Clear cart  <BsMinecartLoaded/></span>
                     <div class="liquid"></div>
-                  </div>
+                  </div>  
                 </button>
             </>
           )}

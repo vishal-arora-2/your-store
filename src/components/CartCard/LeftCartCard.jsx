@@ -43,10 +43,7 @@ const TestCard = (props) => {
             title="Remove item" style={{backgroundColor:"white",border:"0px"}}>
             <i style={{fontSize:"19px",color:"red"}}> <RiDeleteBinLine/></i>
           </button>
-          {/* <button type="button" className="btn btn-danger btn-sm mb-2" data-mdb-toggle="tooltip"
-            title="Move to the wish list">
-            <i className="fas fa-heart"></i>
-          </button> */}
+          
         </div>
 
         <div className="col-lg-4 col-md-6 mb-4 mb-lg-0" >

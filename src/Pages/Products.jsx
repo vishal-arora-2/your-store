@@ -31,6 +31,8 @@ const Products = () => {
       setQuantity(quantity + 1);
       dispatch(cartActions.addItem(data, quantity));
       console.log(data);
+     
+
     };
     const cart = useSelector((state) => {
       return state.cart;

@@ -39,13 +39,33 @@ const CartCard = (props) => {
     }
 
 
-  return (
+
+  var q = details.quantity;
+  var a = details;
+    const dispatch= useDispatch();
+
+    const handleRemoveFromCart = (a)=>{
+      dispatch(cartActions.removeFromCart(a));
+    }
+    const minusHandler = (a) =>{
+      dispatch(cartActions.decreaseCart(a));
+    }
+  
+
+
+
+    const removeallfromcart = () => {
+      dispatch(cartActions.removeAllFromcart());
+    }
+
+
+  return(
     <>
       {details.length === 0 ? (
         <>
           <div style={{ textAlign: "center" }}>
             <MdOutlineRemoveShoppingCart style={{ fontSize: "10rem" }} />
-            <h2>Your Cart is empty</h2>
+            <h2>Your Cart is Company</h2>
             <Link to="/productlist">
               <button className="btn btn-success">Explore Products</button>
             </Link>
@@ -56,9 +76,10 @@ const CartCard = (props) => {
           <div className="container py-5">
             <div className="row d-flex justify-content-center my-4">
               <div className="col-md-8" style={{maxHeight:"77vh", overflowY:"auto"}}>
+              <div className="col-md-8" style={{maxHeight:"77vh",overflowY:"auto"}}>
                 <div className="card mb-4">
                   <div className="card-header py-3">
-                    <h5 className="mb-0">Shopping Cart</h5>
+                    <h5 className="mb-0 display-6" style={{fontSize:"30px"}}>Shopping Cart</h5>
                   </div>
                   {details.map((b) => {
                     return <TestCard b={b} data2={minusHandler} data3={handleRemoveFromCart}/>;

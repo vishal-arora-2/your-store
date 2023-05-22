@@ -1,9 +1,6 @@
 import CardComponent from '../Card/Card'
 import React, { useEffect, useState } from "react";
 import axios from 'axios';
-import { AiOutlineArrowRight } from "react-icons/ai"
-
-
 const HomeCard = (props) => {
     const [prod1, setProd1] = useState([]);
     const [prod2, setProd2] = useState([]);
@@ -18,8 +15,6 @@ const HomeCard = (props) => {
     const [flag, setFlag] = useState(false);
 
     var id1 = 0, id2 = 0, id3 = 0, id4 = 0, id5 = 0, id6 = 0, id7 = 0, id8 = 0, id9 = 0, id10 = 0
-
-
     if (props.name === "men's clothing") {
         id1 = "1"
         id2 = "2"
@@ -61,8 +56,7 @@ const HomeCard = (props) => {
         id9 = "13"
         id10 = "14"
     }
-
-    if (props.name === "electronics") {
+   if (props.name === "electronics") {
         id1 = "10"
         id2 = "11"
         id3 = "12"
@@ -79,8 +73,7 @@ const HomeCard = (props) => {
         console.log(flag)
     }
 
-
-    useEffect(() => {
+useEffect(() => {
         getProducts()
     }, []);
     const getProducts = () => {
@@ -114,7 +107,7 @@ const HomeCard = (props) => {
         }).then(
             (req) => {
                 setProd3(req.data);
-                console.log(req.data);
+               console.log(req.data);
             },
             (err) => {
                 console.log("Error:", err);
@@ -132,10 +125,12 @@ const HomeCard = (props) => {
                 console.log("Error:", err);
             }
         );
-        axios({
+        axios
+        ({
             method: "get",
             url: "https://fakestoreapi.com/products/" + id5,
-        }).then(
+        })
+        .then(
             (req) => {
                 setProd5(req.data);
                 console.log(req.data);
