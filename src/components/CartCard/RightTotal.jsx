@@ -40,9 +40,9 @@ const Total = (props) => {
       localStorage.setItem("totalAmt", showTotal)
     }
   });
-  const removeallfromcart = () => {
-    dispatch(cartActions.removeAllFromcart());
-  }
+  // const removeallfromcart = () => {
+  //   dispatch(cartActions.removeAllFromcart());
+  // }
 
   const [message, setMessage] = useState('');
   const handleChange = event => {
@@ -71,63 +71,65 @@ const Total = (props) => {
   } 
  
   return (
-    <div class="col-md-4">
-      <div class="card mb-4">
-        <div class="card-header py-3">
-          <h5 class="mb-0  mx-5 display-6" style={{fontSize:"28px"}}>Summary</h5>
+    <div className="col-md-4">
+      <div className="card mb-4">
+        <div className="card-header py-3">
+          <h5 className="mb-0  mx-5 display-6" style={{fontSize:"28px"}}>Summary</h5>
         </div>
         <div class="card-body">
+         
+
           {
             cross ? (<>
-
-              <ul class="list-group list-group-flush">
-
-                {props.condition === "1" ? (
-                  <>
-                  </>
-                ) : (
-                  <>
-                    {flag ? <li class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-0">
-                      Subtotal
-                      <s style={{ color: "red" }}><span style={{ marginLeft: "110px" }}>${total}</span></s>
-                      <span style={{ fontWeight: "bold", color: "green" }}>${distotal}</span>
-                    </li> :
-                      <li class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-0">
-                        Subtotal
-                        <span>${total}</span>
-                      </li>}
-                    <li class="list-group-item d-flex justify-content-between align-items-center px-0">
-                      Shipping
-                      <span>
-                        Free shipping <FaShippingFast />
-                      </span>
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 mb-3">
-                      <div>
-                        <strong>Total amount</strong>
-                        <strong>
-                          <p class="mb-0">(including GST)</p>
-                        </strong>
-                      </div>
-                      {flag ? <span >
-                        <strong>${distotal}</strong>
-                      </span> : <> <span>
-                        <strong>${total}</strong>
-                      </span>
-                      </>}
-                    </li>
-                    {
-                      f2 ? <>
-                        <div class="alert alert-success" role="alert">
-                          Congratulations {message} has been applied..!!
-                          <button onClick={removeDiscount}>X</button>
-                        </div>              </> : <></>
-                    }
-                <form class="card p-2 m-2">
-                  <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Promo code" onChange={handleChange} />
-                    <div class="input-group-append">
-                      <button type="button" class="btn btn-success" onClick={discount}>Redeem</button>
+            
+            <ul className="list-group list-group-flush">
+            
+            {props.condition === "1" ? (
+              <>
+              </>
+            ) : (
+              <>
+                {flag ? <li className="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-0">
+                  Subtotal
+                  <s style={{color:"red"}}><span style={{ marginLeft: "110px" }}>${total}</span></s>
+                  <span style={{ fontWeight: "bold", color:"green" }}>${distotal}</span>
+                </li> :
+                  <li className="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-0">
+                    Subtotal
+                    <div  data-testid="total1">{total}</div>
+                  </li>}
+                <li className="list-group-item d-flex justify-content-between align-items-center px-0">
+                  Shipping
+                  <span>
+                    Free shipping <FaShippingFast />
+                  </span>
+                </li>
+                <li className="list-group-item d-flex justify-content-between align-items-center border-0 px-0 mb-3">
+                  <div data-testid="totalamountincgst">
+                    <strong>Total amount</strong>
+                    <strong>
+                      <p className="mb-0">(including GST)</p>
+                    </strong>
+                  </div>
+                  {flag ? <span >
+                    <strong>${distotal}</strong>
+                  </span> :<> <span>
+                    <strong>${total}</strong>
+                  </span>
+                </> }
+                </li>
+                {
+              f2 ? <div data-testid="coupon">
+              <div className="alert alert-success" role="alert" >
+              Congratulations {message} has been applied..!!
+                <button onClick={removeDiscount}>X</button>
+              </div>              </div> : <></>
+            }
+                <form className="card p-2 m-2">
+                  <div className="input-group">
+                    <input type="text" className="form-control" placeholder="Promo code" onChange={handleChange} />
+                    <div className="input-group-append">
+                      <button type="button" className="btn btn-secondary" onClick={discount} data-testid="redeem">Redeem</button>
                     </div>
                   </div>
                   {
@@ -142,41 +144,41 @@ const Total = (props) => {
             
             </>) : (<>
             
-              <ul class="list-group list-group-flush">
+              <ul className="list-group list-group-flush">
             
             {props.condition === "1" ? (
               <>
               </>
             ) : (
               <>
-                {flag ? <li class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-0">
+                {flag ? <li className="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-0">
                   Subtotal
                   <span style={{ marginLeft: "110px" }}>${total}</span>
                 </li> :
-                  <li class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-0">
+                  <li className="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-0">
                     Subtotal
                     <span>${total}</span>
                   </li>}
-                <li class="list-group-item d-flex justify-content-between align-items-center px-0">
+                <li className="list-group-item d-flex justify-content-between align-items-center px-0">
                   Shipping
                   <span>
                     Free shipping <FaShippingFast />
                   </span>
                 </li>
-                <li class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 mb-3">
+                <li className="list-group-item d-flex justify-content-between align-items-center border-0 px-0 mb-3">
                   <div>
                     <strong>Total amount</strong>
                     <strong>
-                      <p class="mb-0">(including GST)</p>
+                      <p className="mb-0">(including GST)</p>
                     </strong>
                   </div>
                  <strong>${total}</strong>
                 </li>
-                <form class="card p-2 m-2">
-                  <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Promo code" onChange={handleChange} />
-                    <div class="input-group-append">
-                      <button type="button" class="btn btn-secondary" onClick={discount}>Redeem</button>
+                <form className="card p-2 m-2">
+                  <div className="input-group">
+                    <input type="text" className="form-control" placeholder="Promo code" onChange={handleChange} />
+                    <div className="input-group-append">
+                      <button type="button" className="btn btn-secondary" onClick={discount}>Redeem</button>
                     </div>
                   </div>
                   {
@@ -198,18 +200,27 @@ const Total = (props) => {
             </>
           ) : (
             <>
-                <NavLink to="/cartreview" style={{ textDecoration: "none" }}>
+              <a href="/cartreview" style={{ textDecoration: "none" }} data-testid='move'>
                  <div className="a">
                     <span>Checkout <MdOutlineShoppingCartCheckout /></span>
                     <div class="liquid"></div>
                   </div>
-                </NavLink>
+                </a>
+              {/* <button
+                type="button"
+                className="btn button2 btn-danger btn-lg btn-block"
+                style={{ marginTop: "10px" }}
+                onClick={props.removeallfromcart}
+                data-testid='clearcart'
+              >
+                Clear Cart
+              </button> */}
                 
-              <button onClick={removeallfromcart} style={{backgroundColor:"white",border:"0px"}}>
+              <button onClick={props.removeallfromcart} style={{backgroundColor:"white",border:"0px"}} data-testid='clearcart'>
                  <div className="b" style={{ marginTop: "10px" }}>
                     <span>Clear cart  <BsMinecartLoaded/></span>
                     <div class="liquid"></div>
-                  </div>
+                  </div>  
                 </button>
             </>
           )}

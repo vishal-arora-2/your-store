@@ -31,6 +31,8 @@ const Products = () => {
       setQuantity(quantity + 1);
       dispatch(cartActions.addItem(data, quantity));
       console.log(data);
+     
+
     };
     const cart = useSelector((state) => {
       return state.cart;
@@ -74,7 +76,7 @@ const Products = () => {
             
                    <div className="cart-buttons"> 
                    {!quantity ? (
-                   <button data-testid="addtocartbtn" onClick={addToCart} className="add-to-cart-button">
+                   <button onClick={addToCart} className="add-to-cart-button" data-testid="addtocartbtn">
                      <FaCartPlus size={20} />
                      ADD TO CART
                    </button> 

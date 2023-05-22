@@ -104,7 +104,7 @@ const HeaderNavbar = () => {
       <nav class="navbar navbar-expand-lg navbar-light mb-3v body1">
         <div class="container-fluid">
           <a class="navbar-brand name text-light" href="/">
-            CARTit
+            YOURstore
           </a>
           <button
             class="navbar-toggler"

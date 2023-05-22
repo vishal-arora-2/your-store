@@ -1,4 +1,4 @@
-import { fireEvent, queryByText, render, screen } from "@testing-library/react";
+import { fireEvent, render} from "@testing-library/react";
 import { Provider } from "react-redux";
 import store from "../../../store";
 import FilterSection from "../../../components/FilterSection";
