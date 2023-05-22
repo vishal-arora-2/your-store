@@ -46,10 +46,7 @@ const TestCard = (props) => {
             title="Remove item" style={{backgroundColor:"white",border:"0px"}}>
             <i style={{fontSize:"19px",color:"red"}}> <RiDeleteBinLine/></i>
           </button>
-          {/* <button type="button" className="btn btn-danger btn-sm mb-2" data-mdb-toggle="tooltip"
-            title="Move to the wish list">
-            <i className="fas fa-heart"></i>
-          </button> */}
+          
         </div>
 
         <div className="col-lg-4 col-md-6 mb-4 mb-lg-0" >
@@ -57,7 +54,7 @@ const TestCard = (props) => {
           <div className="d-flex mb-4" style={{maxWidth: "300px"}}>
             <button className="btn btn-dark px-3 ms-2" style={{height:"40px"}}
               onClick={()=>minusHandler(props.b)}>
-              <i className="fas fa-minus"></i>
+              <i className="fas fa-minus" ></i>
             </button>
             <div><button className='btn btn-light mx-2'>{props.b.quantity}</button> </div>
             <button className="btn btn-dark px-3" style={{height:"40px"}}
