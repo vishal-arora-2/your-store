@@ -4,6 +4,10 @@ import { useState, useEffect } from "react";
 import { FaShippingFast } from "react-icons/fa";
 import { useDispatch } from "react-redux";
 import { cartActions } from "../../slice/cartSlice";
+import { NavLink } from "react-router-dom";
+import {MdOutlineShoppingCartCheckout} from 'react-icons/md'
+import {BsMinecartLoaded} from 'react-icons/bs'
+
 
 const Total = (props) => {
 
@@ -70,9 +74,9 @@ const Total = (props) => {
     <div className="col-md-4">
       <div className="card mb-4">
         <div className="card-header py-3">
-          <h5 className="mb-0">Summary</h5>
+          <h5 className="mb-0  mx-5 display-6" style={{fontSize:"28px"}}>Summary</h5>
         </div>
-        <div className="card-body">
+        <div class="card-body">
          
 
           {

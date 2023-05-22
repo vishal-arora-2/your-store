@@ -3,6 +3,7 @@ import { useSelector } from "react-redux";
 import Total from "../components/CartCard/RightTotal";
 import {MdShoppingCartCheckout} from 'react-icons/md'
 import CartReviewCard from "../components/CartReviewCard/CartReviewCard";
+import { NavLink } from "react-router-dom";
 
 const CartReview = () => {
   const [details, setDetails] = useState([]);
@@ -30,10 +31,12 @@ const CartReview = () => {
                 <span class="text-info">Your cart</span>
                 <span class="badge bg-dark rounded-pill" data-testid="totalitem">{tot} Items</span>
             </h4>
-          {details.map((item) => {
+            <div style={{maxHeight:"80vh", overflowY:"auto"}}>
+            {details.map((item) => {
                 return <CartReviewCard item={item} />;
               })}
-              <b style={{marginLeft:"180px"}}>Total Amount :  <b style={{color:"green"}} data-testid="totalamount">${totalAmt}</b></b>
+            </div>
+              <b style={{textAlign:"center"}}>Total Amount :  <b style={{color:"green"}} data-testid="totalamount">${totalAmt}</b></b>
                  </div>
             <div class="col-md-7 col-lg-8">
                 <h4 class="mb-3 text-info">Billing address</h4>
@@ -115,7 +118,10 @@ const CartReview = () => {
                         <label class="form-check-label" for="save-info">Save this information for next time</label>
                     </div>
                     <hr class="my-4"/>
-                    <button class="w-100 btn btn-success btn-md" type="submit">Continue to Payment</button>
+                      <NavLink to="/payment">
+                      <button class="w-100 btn btn-success btn-md" type="submit">Continue to Payment</button>
+                    </NavLink>
+                    
                 </form>
             </div>
         </div>
