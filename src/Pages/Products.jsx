@@ -141,7 +141,7 @@ const Products = () => {
             <span className="desc">{data.description}</span>
                    <div className="cart-buttons"> 
                    {!quantity ? (
-                   <button onClick={addToCart} className="add-to-cart-button">
+                   <button onClick={addToCart} className="add-to-cart-button" data-testid="addtocart">
                      <FaCartPlus size={20} />
                      ADD TO CART
                    </button> 

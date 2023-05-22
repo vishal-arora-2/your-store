@@ -5,8 +5,11 @@ import TestCard from "./LeftCartCard";
 import Total from "./RightTotal";
 import { MdOutlineRemoveShoppingCart } from "react-icons/md";
 import { Link } from "react-router-dom";
+import { useDispatch} from 'react-redux';
+import { cartActions } from '../../slice/cartSlice';
 
-const CartCard = () => {
+const CartCard = (props) => {
+  
   const [details, setdetails] = useState([]);
   const data = useSelector((state) => {
     return state.cart.cartItems;
@@ -15,6 +18,26 @@ const CartCard = () => {
   useEffect(() => {
     setdetails(data);
   }, [data]);
+
+
+  var q = details.quantity;
+  var a = details;
+    const dispatch= useDispatch();
+
+    const handleRemoveFromCart = (a)=>{
+      dispatch(cartActions.removeFromCart(a));
+    }
+    const minusHandler = (a) =>{
+      dispatch(cartActions.decreaseCart(a));
+    }
+  
+
+
+
+    const removeallfromcart = () => {
+      dispatch(cartActions.removeAllFromcart());
+    }
+
 
   return (
     <>
@@ -38,11 +61,11 @@ const CartCard = () => {
                     <h5 className="mb-0">Shopping Cart</h5>
                   </div>
                   {details.map((b) => {
-                    return <TestCard b={b} />;
+                    return <TestCard b={b} data2={minusHandler} data3={handleRemoveFromCart}/>;
                   })}
                 </div>
               </div>
-              <Total condition={"2"} />
+              <Total condition={"2"} removeallfromcart={removeallfromcart}/>
             </div>
           </div>
         </section>
