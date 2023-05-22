@@ -15,8 +15,10 @@ import {
 } from "react-icons/fa";
 import {BsShieldCheck} from "react-icons/bs"
 import "./SingleProduct.scss";
+import HomeCard from "../components/HomeCard/HomeCard";
 
 const Products = () => {
+
   const [quantity, setQuantity] = useState(0);
   const id = useParams();
   const [data, setData] = useState([]);
@@ -44,6 +46,7 @@ const Products = () => {
       );
       setData(response.data);
       console.log(data);
+     
     } catch (error) {
       console.log(error);
     }
@@ -51,8 +54,11 @@ const Products = () => {
   useEffect(() => {
     getProducts();
   }, []);
+  console.log(data.category);
+  var cat = data.category;
  
   return (
+      <>
     <div className="single-product-main-content">
       <div className="layout">
         <div className="single-product-page">
@@ -103,6 +109,10 @@ const Products = () => {
      
       </div>
     </div>
+ 
+    <h3 className="text-center text-decoration-underline">Similar Products</h3>
+    <HomeCard name={cat}/> 
+    </>
   );
 };
 
