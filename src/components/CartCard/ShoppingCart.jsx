@@ -40,24 +40,7 @@ const CartCard = (props) => {
 
 
 
-  var q = details.quantity;
-  var a = details;
-    const dispatch= useDispatch();
-
-    const handleRemoveFromCart = (a)=>{
-      dispatch(cartActions.removeFromCart(a));
-    }
-    const minusHandler = (a) =>{
-      dispatch(cartActions.decreaseCart(a));
-    }
   
-
-
-
-    const removeallfromcart = () => {
-      dispatch(cartActions.removeAllFromcart());
-    }
-
 
   return(
     <>
@@ -88,6 +71,7 @@ const CartCard = (props) => {
               </div>
               <Total condition={"2"} removeallfromcart={removeallfromcart}/>
             </div>
+          </div>
           </div>
         </section>
       )}
