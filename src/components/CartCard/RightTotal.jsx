@@ -74,7 +74,7 @@ const Total = (props) => {
     <div class="col-md-4">
       <div class="card mb-4">
         <div class="card-header py-3">
-          <h5 class="mb-0  mx-5 display-6" style={{fontSize:"28px"}}>Summary</h5>
+          <h5 class="mb-0 display-6" style={{fontSize:"28px"}}>Summary</h5>
         </div>
         <div class="card-body">
           {
@@ -209,7 +209,7 @@ const Total = (props) => {
                  <div className="b" style={{ marginTop: "10px" }}>
                     <span>Clear cart  <BsMinecartLoaded/></span>
                     <div class="liquid"></div>
-                  </div>
+                  </div>  
                 </button>
             </>
           )}
