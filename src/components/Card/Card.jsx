@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Card from "react-bootstrap/Card";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { cartActions } from "../../slice/cartSlice";
 import { useDispatch, useSelector } from "react-redux";
 import "../../Pages/eg.css";
@@ -31,13 +31,13 @@ const CardComponent = (props) => {
         style={{ width: "13rem", borderRadius: "15px" }}
         className="m-3 card1"
       >
-        <NavLink to={`/product/${id}`}>
+        <Link to={`/product/${id}`}>
           <Card.Img
             variant="top"
             src={image}
             style={{ height: "13rem", padding: "36px" }}
           />
-        </NavLink>
+        </Link>
 
         <Card.Body>
           <Card.Title
