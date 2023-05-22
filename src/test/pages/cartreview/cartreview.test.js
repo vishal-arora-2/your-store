@@ -4,7 +4,7 @@ import { Provider } from "react-redux";
 import CartReview from "../../../Pages/CartReview";
 import store from "../../../store";
 
-describe("products listing page", () => {
+describe("cartreview page", () => {
   test("checkout text testing", () => {
     const { getByText } = render(
       <Provider store={store}>
