@@ -426,10 +426,7 @@ content: '';
   animation: ring 1.5s infinite;
 }
 
-/* .buttonn:hover::after, .buttonn:focus::after {
-  animation: none;
-  display: none;
-} */
+
 
 @keyframes ring {
   0% {
@@ -443,4 +440,6 @@ content: '';
     opacity: 0;
   }
 }
+/* ADD REMOVE BUTTON */
+
 
