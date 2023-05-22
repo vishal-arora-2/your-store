@@ -54,15 +54,17 @@ describe("test of Filter Section Page", () => {
   });
 });
 
-// describe("testing button", () => {
-//   test("Button Click", () => {
-//     const { getByText } = render(
-//       <Provider store={store}>
-//         <FilterSection />
-//       </Provider>
-//     );
-//     expect(getByText("Clear Filters")).toBeTruthy();
-//     fireEvent.click(getByText("Clear Filters"));
-//     expect(getByText(""));
-//   });
-// });
+describe("testing button", () => {
+  test("Button Click", () => {
+    const setFilter = jest.fn();
+    const { getByText, getByTestId } = render(
+      <Provider store={store}>
+        <FilterSection setFilter={setFilter} />
+      </Provider>
+    );
+    expect(getByText("Clear Filters")).toBeTruthy();
+    fireEvent.click(getByText("Clear Filters"));
+    const price = getByTestId("id");
+    expect(price.textContent).toBe("$0");
+  });
+});
