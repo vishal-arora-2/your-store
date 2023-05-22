@@ -45,7 +45,7 @@ const Products = () => {
         "https://fakestoreapi.com/products/" + id.id
       );
       setData(response.data);
-      console.log(data);
+      // console.log(data);
      
     } catch (error) {
       console.log(error);
@@ -74,7 +74,7 @@ const Products = () => {
             
                    <div className="cart-buttons"> 
                    {!quantity ? (
-                   <button onClick={addToCart} className="add-to-cart-button">
+                   <button data-testid="addtocartbtn" onClick={addToCart} className="add-to-cart-button">
                      <FaCartPlus size={20} />
                      ADD TO CART
                    </button> 
