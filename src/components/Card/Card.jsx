@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Card from "react-bootstrap/Card";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { cartActions } from "../../slice/cartSlice";
 import { useDispatch, useSelector } from "react-redux";
 import "../../Pages/eg.css";
@@ -31,13 +31,13 @@ const CardComponent = (props) => {
         style={{ width: "13rem", borderRadius: "15px" }}
         className="m-3 card1"
       >
-        <NavLink to={`/product/${id}`}>
+        <a>
           <Card.Img
             variant="top"
             src={image}
             style={{ height: "13rem", padding: "36px" }}
           />
-        </NavLink>
+        </a>
 
         <Card.Body>
           <Card.Title
@@ -46,7 +46,10 @@ const CardComponent = (props) => {
           >
             {title}
           </Card.Title>
-          <Card.Text className="font-weight-bold">{`$${price}`}</Card.Text>
+          <Card.Text
+            className="font-weight-bold"
+            data-testid="altquant"
+          >{`$${price}`}</Card.Text>
           {!quantity ? (
             <div className="newp">
               <button
@@ -68,16 +71,20 @@ const CardComponent = (props) => {
                 className="btn btn-outline-dark px-3 ms-2"
                 style={{ height: "40px" }}
                 onClick={minusHandeler}
+                data-testid="minus"
               >
                 <i className="fas fa-minus"></i>
               </button>
               <div>
-                <button className="btn btn-dark mx-2">{quantity}</button>
+                <button className="btn btn-dark mx-2" data-testid="quant">
+                  {quantity}
+                </button>
               </div>
               <button
                 className="btn btn-outline-dark px-3"
                 style={{ height: "40px" }}
                 onClick={plusHandeler}
+                data-testid="plus"
               >
                 <i className="fas fa-plus"></i>
               </button>
