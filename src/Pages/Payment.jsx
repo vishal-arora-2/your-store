@@ -5,10 +5,11 @@ import { useState, useEffect } from "react";
 import { FaShippingFast, FaDollarSign, FaCreditCard } from "react-icons/fa";
 import { BsCashCoin } from "react-icons/bs";
 import { useDispatch } from "react-redux";
-import { render } from "@testing-library/react";
-import ReactConfetti from "react-confetti";
-import { cartActions } from "../slice/cartSlice";
-import { useNavigate } from "react-router-dom";
+import { render } from '@testing-library/react';
+import ReactConfetti from 'react-confetti';
+import { cartActions } from '../slice/cartSlice';
+import { useNavigate } from 'react-router-dom/dist';
+
 
 const Payment = (props) => {
   const [windowDimension, setDimension] = useState({
