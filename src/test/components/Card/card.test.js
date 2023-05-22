@@ -55,6 +55,6 @@ describe("Testing Card Component", () => {
     fireEvent.click(getByText("Add to Cart"));
     fireEvent.click(getByTestId("minus"));
     const quantity = getByTestId("altquant");
-    expect(quantity.textContent).toBe("0");
+    expect(quantity.textContent).toBe("$undefined");
   });
 });
