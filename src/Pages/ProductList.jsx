@@ -40,7 +40,7 @@ const ProductList = () => {
           />
         </div>
 
-        <div className="col-md-10">
+        <div className="col-md-10" data-testid="cardId">
           {filter.map((items) => {
             return <Card data={items} />;
           })}
