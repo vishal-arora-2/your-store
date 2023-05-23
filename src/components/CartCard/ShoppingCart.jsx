@@ -59,7 +59,6 @@ const CartCard = (props) => {
           <div className="container py-5">
             <div className="row d-flex justify-content-center my-4">
               <div className="col-md-8" style={{maxHeight:"77vh", overflowY:"auto"}}>
-              <div className="col-md-8" style={{maxHeight:"77vh",overflowY:"auto"}}>
                 <div className="card mb-4">
                   <div className="card-header py-3">
                     <h5 className="mb-0 display-6" style={{fontSize:"30px"}}>Shopping Cart</h5>
@@ -71,7 +70,6 @@ const CartCard = (props) => {
               </div>
               <Total condition={"2"} removeallfromcart={removeallfromcart}/>
             </div>
-          </div>
           </div>
         </section>
       )}

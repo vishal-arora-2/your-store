@@ -30,8 +30,6 @@ const Products = () => {
     const addToCart = () => {
       setQuantity(quantity + 1);
       dispatch(cartActions.addItem(data, quantity));
-      console.log(data);
-     
 
     };
     const cart = useSelector((state) => {
@@ -56,7 +54,6 @@ const Products = () => {
   useEffect(() => {
     getProducts();
   }, []);
-  console.log(data.category);
   var cat = data.category;
  
   return (
