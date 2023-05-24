@@ -1,4 +1,4 @@
-import { fireEvent, render} from "@testing-library/react";
+import { fireEvent, render } from "@testing-library/react";
 import { Provider } from "react-redux";
 import store from "../../../store";
 import FilterSection from "../../../components/FilterSection";
@@ -55,7 +55,7 @@ describe("test of Filter Section Page", () => {
 });
 
 describe("testing button", () => {
-  test("Button Click", () => {
+  test("Button Click Clear Filter", () => {
     const setFilter = jest.fn();
     const { getByText, getByTestId } = render(
       <Provider store={store}>
@@ -66,5 +66,60 @@ describe("testing button", () => {
     fireEvent.click(getByText("Clear Filters"));
     const price = getByTestId("id");
     expect(price.textContent).toBe("$0");
+  });
+  test("test setFilter button ALL", () => {
+    const setFilter = jest.fn();
+    const { getByTestId } = render(
+      <Provider store={store}>
+        <FilterSection setFilter={setFilter} />
+      </Provider>
+    );
+    expect(getByTestId("ALL")).toBeTruthy();
+    fireEvent.click(getByTestId("ALL"));
+    expect(setFilter).toHaveBeenCalled();
+  });
+  test("test setFilter button Men's Clothing", () => {
+    const filterProduct = jest.fn();
+    const { getByTestId } = render(
+      <Provider store={store}>
+        <FilterSection filterProduct={filterProduct} />
+      </Provider>
+    );
+    expect(getByTestId("men")).toBeTruthy();
+    fireEvent.click(getByTestId("men"));
+    expect(filterProduct).toHaveBeenCalled();
+  });
+  test("test setFilter button Women's Clothing", () => {
+    const filterProduct = jest.fn();
+    const { getByTestId } = render(
+      <Provider store={store}>
+        <FilterSection filterProduct={filterProduct} />
+      </Provider>
+    );
+    expect(getByTestId("women")).toBeTruthy();
+    fireEvent.click(getByTestId("women"));
+    expect(filterProduct).toHaveBeenCalled();
+  });
+  test("test filterProduct button Jewelery", () => {
+    const filterProduct = jest.fn();
+    const { getByTestId } = render(
+      <Provider store={store}>
+        <FilterSection filterProduct={filterProduct} />
+      </Provider>
+    );
+    expect(getByTestId("jewelery")).toBeTruthy();
+    fireEvent.click(getByTestId("jewelery"));
+    expect(filterProduct).toHaveBeenCalled();
+  });
+  test("test filterProduct button Electronics", () => {
+    const filterProduct = jest.fn();
+    const { getByTestId } = render(
+      <Provider store={store}>
+        <FilterSection filterProduct={filterProduct} />
+      </Provider>
+    );
+    expect(getByTestId("electronics")).toBeTruthy();
+    fireEvent.click(getByTestId("electronics"));
+    expect(filterProduct).toHaveBeenCalled();
   });
 });
