@@ -45,6 +45,7 @@ const Products = () => {
       );
       setData(response.data);
       console.log(data);
+      // console.log(data);
     } catch (error) {
       console.log(error);
     }
