@@ -83,7 +83,7 @@ useEffect(() => {
         }).then(
             (req) => {
                 setProd1(req.data);
-                console.log(req.data);
+                // console.log(req.data);
             },
             (err) => {
                 console.log("Error:", err);
@@ -95,7 +95,7 @@ useEffect(() => {
         }).then(
             (req) => {
                 setProd2(req.data);
-                console.log(req.data);
+                // console.log(req.data);
             },
             (err) => {
                 console.log("Error:", err);
@@ -107,7 +107,7 @@ useEffect(() => {
         }).then(
             (req) => {
                 setProd3(req.data);
-               console.log(req.data);
+                // console.log(req.data);
             },
             (err) => {
                 console.log("Error:", err);
@@ -119,7 +119,7 @@ useEffect(() => {
         }).then(
             (req) => {
                 setProd4(req.data);
-                console.log(req.data);
+                // console.log(req.data);
             },
             (err) => {
                 console.log("Error:", err);
@@ -133,7 +133,7 @@ useEffect(() => {
         .then(
             (req) => {
                 setProd5(req.data);
-                console.log(req.data);
+                // console.log(req.data);
             },
             (err) => {
                 console.log("Error:", err);
@@ -145,7 +145,7 @@ useEffect(() => {
         }).then(
             (req) => {
                 setProd6(req.data);
-                console.log(req.data);
+                // console.log(req.data);
             },
             (err) => {
                 console.log("Error:", err);
@@ -157,7 +157,7 @@ useEffect(() => {
         }).then(
             (req) => {
                 setProd7(req.data);
-                console.log(req.data);
+                // console.log(req.data);
             },
             (err) => {
                 console.log("Error:", err);
@@ -169,7 +169,7 @@ useEffect(() => {
         }).then(
             (req) => {
                 setProd8(req.data);
-                console.log(req.data);
+                // console.log(req.data);
             },
             (err) => {
                 console.log("Error:", err);
@@ -181,7 +181,7 @@ useEffect(() => {
         }).then(
             (req) => {
                 setProd9(req.data);
-                console.log(req.data);
+                // console.log(req.data);
             },
             (err) => {
                 console.log("Error:", err);
@@ -193,7 +193,7 @@ useEffect(() => {
         }).then(
             (req) => {
                 setProd10(req.data);
-                console.log(req.data);
+                // console.log(req.data);
             },
             (err) => {
                 console.log("Error:", err);
