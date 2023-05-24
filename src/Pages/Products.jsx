@@ -45,7 +45,6 @@ const Products = () => {
       );
       setData(response.data);
       console.log(data);
-      // console.log(data);
     } catch (error) {
       console.log(error);
     }
@@ -79,9 +78,9 @@ const Products = () => {
               <div className="cart-buttons">
                 {!quantity ? (
                   <button
-                    data-testid="addtocartbtn"
                     onClick={addToCart}
                     className="add-to-cart-button"
+                    data-testid="addtocartbtn"
                   >
                     <FaCartPlus size={20} />
                     ADD TO CART
