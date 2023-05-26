@@ -8,7 +8,7 @@ import { useDispatch } from "react-redux";
 import { render } from "@testing-library/react";
 import ReactConfetti from "react-confetti";
 import { cartActions } from "../slice/cartSlice";
-import { useNavigate } from "react-router";
+// import { useNavigate } from "react-router";
 
 const Payment = (props) => {
   const [windowDimension, setDimension] = useState({
@@ -25,7 +25,7 @@ const Payment = (props) => {
     };
   }, [windowDimension]);
   const dispatch = useDispatch();
-  const Navigate = useNavigate();
+  // const Navigate = useNavigate();
   const [Btn, setBtn] = useState(false);
   const [details, setdetails] = useState([]);
   const [one, setone] = useState();
@@ -52,7 +52,7 @@ const Payment = (props) => {
         },
       },
     }).then(function () {
-      Navigate("/");
+      // Navigate("/");
     });
   };
   var showTotal = localStorage.getItem("totalAmt");
