@@ -30,7 +30,7 @@ const CartCard = (props) => {
     const minusHandler = (a) =>{
       dispatch(cartActions.decreaseCart(a));
     }
-  
+
 
 
 
@@ -48,7 +48,7 @@ const CartCard = (props) => {
         <>
           <div style={{ textAlign: "center" }}>
             <MdOutlineRemoveShoppingCart style={{ fontSize: "10rem" }} />
-            <h2>Your Cart is Company</h2>
+            <h2>Your Cart is Empty</h2>
             <Link to="/productlist">
               <button className="btn btn-success">Explore Products</button>
             </Link>
