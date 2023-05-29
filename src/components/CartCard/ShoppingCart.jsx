@@ -30,7 +30,7 @@ const CartCard = (props) => {
     const minusHandler = (a) =>{
       dispatch(cartActions.decreaseCart(a));
     }
-  
+
 
 
 
@@ -46,20 +46,19 @@ const CartCard = (props) => {
     <>
       {details.length === 0 ? (
         <>
-          <div style={{ textAlign: "center" }}>
+          <div style={{ textAlign: "center" }} >
             <MdOutlineRemoveShoppingCart style={{ fontSize: "10rem" }} />
-            <h2>Your Cart is Company</h2>
-            <Link to="/productlist">
-              <button className="btn btn-success">Explore Products</button>
-            </Link>
+            <h2 data-testid="cart">Your Cart is Empty</h2>
+            <a href="/productlist">
+              <button className="btn btn-success"  data-testid="explore">Explore Products</button>
+            </a>
           </div>
         </>
       ) : (
         <section className="h-100 gradient-custom">
-          <div className="container py-5">
+          <div className="container py-5" data-testid='after'>
             <div className="row d-flex justify-content-center my-4">
               <div className="col-md-8" style={{maxHeight:"77vh", overflowY:"auto"}}>
-              <div className="col-md-8" style={{maxHeight:"77vh",overflowY:"auto"}}>
                 <div className="card mb-4">
                   <div className="card-header py-3">
                     <h5 className="mb-0 display-6" style={{fontSize:"30px"}}>Shopping Cart</h5>
@@ -71,7 +70,6 @@ const CartCard = (props) => {
               </div>
               <Total condition={"2"} removeallfromcart={removeallfromcart}/>
             </div>
-          </div>
           </div>
         </section>
       )}

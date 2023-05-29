@@ -1,4 +1,4 @@
-import { render,fireEvent, getByTestId} from '@testing-library/react';
+import { render,fireEvent} from '@testing-library/react';
 import React from 'react';
 import { Provider } from 'react-redux';
 import LeftCartCard from "../../../components/CartCard/LeftCartCard";
@@ -10,7 +10,7 @@ const data = {"id":1,"quantity":1,"title":"Fjallraven - Foldsack No. 1 Backpack,
 
 describe('test cases of add to cart page',()=>{
 
-
+    
     test('summary exists',()=>{
          const {getByText} = render (
             <Provider store={store}>

@@ -22,21 +22,21 @@ const Products = () => {
   const id = useParams();
   const [data, setData] = useState([]);
   const dispatch = useDispatch();
-  const minusHandeler = () => {
-    setQuantity(quantity - 1);
-    dispatch(cartActions.decreaseCart(data, quantity));
-  };
-  const addToCart = () => {
-    setQuantity(quantity + 1);
-    dispatch(cartActions.addItem(data, quantity));
-    console.log(data);
-  };
-  const cart = useSelector((state) => {
-    return state.cart;
-  });
-  const plusHandeler = () => {
-    addToCart();
-  };
+    const minusHandeler = () => {
+      setQuantity(quantity - 1);
+      dispatch(cartActions.decreaseCart(data, quantity));
+    };
+    const addToCart = () => {
+      setQuantity(quantity + 1);
+      dispatch(cartActions.addItem(data, quantity));
+
+    };
+    const cart = useSelector((state) => {
+      return state.cart;
+    });
+    const plusHandeler = () => {
+      addToCart();
+    };
 
   const getProducts = async () => {
     try {
@@ -44,7 +44,7 @@ const Products = () => {
         "https://fakestoreapi.com/products/" + id.id
       );
       setData(response.data);
-      console.log(data);
+     
     } catch (error) {
       console.log(error);
     }
@@ -52,7 +52,6 @@ const Products = () => {
   useEffect(() => {
     getProducts();
   }, []);
-  console.log(data.category);
   var cat = data.category;
 
   return (

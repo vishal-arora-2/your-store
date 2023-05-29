@@ -103,7 +103,7 @@ const HeaderNavbar = () => {
       </section> */}
       <nav class="navbar navbar-expand-lg navbar-light mb-3v body1">
         <div class="container-fluid">
-          <a class="navbar-brand name text-light" href="/">
+          <a class="navbar-brand name text-light" href="/" data-testid='title'>
             YOURstore
           </a>
           <button
@@ -119,7 +119,7 @@ const HeaderNavbar = () => {
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
+              <li class="nav-item" data-testid='home'>
                 <a
                   class="nav-link active an"
                   style={{ color: "white" }}
@@ -129,17 +129,17 @@ const HeaderNavbar = () => {
                   <span> Home</span>
                 </a>
               </li>
-              <li class="nav-item">
+              <li class="nav-item" data-testid='products'>
                 <a class="nav-link an" href="/productlist">
                   Products
                 </a>
               </li>
-              <li class="nav-item">
+              <li class="nav-item" data-testid='about'>
                 <a class="nav-link an" href="/about">
                   About
                 </a>
               </li>
-              <li class="nav-item">
+              <li class="nav-item" data-testid='contact'>
                 <a class="nav-link an" href="contact">
                   Contact
                 </a>
@@ -156,11 +156,11 @@ const HeaderNavbar = () => {
               />
               <i type="button" onClick={searchUpdate} class="fa fa-search"></i>
             </form>
-            <NavLink className="nav-link ms-6 px-2 border-0" exact to="/cart">
+            <a href="/cart" className="nav-link ms-6 px-2 border-0" data-testid='cart'>
               Cart
               <HiOutlineShoppingCart />
               <sup>{quan}</sup>
-            </NavLink>
+            </a>
           </div>
         </div>
       </nav>
