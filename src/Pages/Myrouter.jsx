@@ -13,19 +13,19 @@ import Search from "./Search";
 import Payment from "./Payment";
 const Myrouter = () => {
   return (
-    <div>
+    <div data-testid="router">
       <BrowserRouter>
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact/>} />
+          <Route path="/contact" element={<Contact />} />
           <Route path="/productlist" element={<ProductList />} />
           <Route path="/cartreview" element={<CartReview />} />
           <Route path="/product/:id" element={<Products />} />
-          <Route path="/search" element={<Search/>}></Route>
-          <Route path="/payment" element={<Payment/>}></Route>
+          <Route path="/search" element={<Search />}></Route>
+          <Route path="/payment" element={<Payment />}></Route>
         </Routes>
         <Footer />
       </BrowserRouter>
