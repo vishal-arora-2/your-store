@@ -3,7 +3,7 @@ import ShoppingCard from '../components/CartCard/ShoppingCart'
 
 const Cart = () => {
   return (
-    <div>
+    <div data-testid='cartt'>
       <ShoppingCard/>
     </div>
   )

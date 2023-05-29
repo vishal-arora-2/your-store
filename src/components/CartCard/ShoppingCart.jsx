@@ -46,17 +46,17 @@ const CartCard = (props) => {
     <>
       {details.length === 0 ? (
         <>
-          <div style={{ textAlign: "center" }}>
+          <div style={{ textAlign: "center" }} >
             <MdOutlineRemoveShoppingCart style={{ fontSize: "10rem" }} />
-            <h2>Your Cart is Empty</h2>
-            <Link to="/productlist">
-              <button className="btn btn-success">Explore Products</button>
-            </Link>
+            <h2 data-testid="cart">Your Cart is Empty</h2>
+            <a href="/productlist">
+              <button className="btn btn-success"  data-testid="explore">Explore Products</button>
+            </a>
           </div>
         </>
       ) : (
         <section className="h-100 gradient-custom">
-          <div className="container py-5">
+          <div className="container py-5" data-testid='after'>
             <div className="row d-flex justify-content-center my-4">
               <div className="col-md-8" style={{maxHeight:"77vh", overflowY:"auto"}}>
                 <div className="card mb-4">
