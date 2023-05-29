@@ -79,131 +79,123 @@ const HomeCard = (props) => {
     console.log(flag);
   };
 
-  useEffect(() => {
-    getProducts();
-  }, []);
-  const getProducts = () => {
-    axios({
-      method: "get",
-      url: "https://fakestoreapi.com/products/" + id1,
-    }).then(
-      (req) => {
-        setProd1(req.data);
-        console.log(req.data);
-      },
-      (err) => {
-        console.log("Error:", err);
-      }
-    );
-    axios({
-      method: "get",
-      url: "https://fakestoreapi.com/products/" + id2,
-    }).then(
-      (req) => {
-        setProd2(req.data);
-        console.log(req.data);
-      },
-      (err) => {
-        console.log("Error:", err);
-      }
-    );
-    axios({
-      method: "get",
-      url: "https://fakestoreapi.com/products/" + id3,
-    }).then(
-      (req) => {
-        setProd3(req.data);
-        console.log(req.data);
-      },
-      (err) => {
-        console.log("Error:", err);
-      }
-    );
-    axios({
-      method: "get",
-      url: "https://fakestoreapi.com/products/" + id4,
-    }).then(
-      (req) => {
-        setProd4(req.data);
-        console.log(req.data);
-      },
-      (err) => {
-        console.log("Error:", err);
-      }
-    );
-    axios({
-      method: "get",
-      url: "https://fakestoreapi.com/products/" + id5,
-    }).then(
-      (req) => {
-        setProd5(req.data);
-        console.log(req.data);
-      },
-      (err) => {
-        console.log("Error:", err);
-      }
-    );
-    axios({
-      method: "get",
-      url: "https://fakestoreapi.com/products/" + id6,
-    }).then(
-      (req) => {
-        setProd6(req.data);
-        console.log(req.data);
-      },
-      (err) => {
-        console.log("Error:", err);
-      }
-    );
-    axios({
-      method: "get",
-      url: "https://fakestoreapi.com/products/" + id7,
-    }).then(
-      (req) => {
-        setProd7(req.data);
-        console.log(req.data);
-      },
-      (err) => {
-        console.log("Error:", err);
-      }
-    );
-    axios({
-      method: "get",
-      url: "https://fakestoreapi.com/products/" + id8,
-    }).then(
-      (req) => {
-        setProd8(req.data);
-        console.log(req.data);
-      },
-      (err) => {
-        console.log("Error:", err);
-      }
-    );
-    axios({
-      method: "get",
-      url: "https://fakestoreapi.com/products/" + id9,
-    }).then(
-      (req) => {
-        setProd9(req.data);
-        console.log(req.data);
-      },
-      (err) => {
-        console.log("Error:", err);
-      }
-    );
-    axios({
-      method: "get",
-      url: "https://fakestoreapi.com/products/" + id10,
-    }).then(
-      (req) => {
-        setProd10(req.data);
-        console.log(req.data);
-      },
-      (err) => {
-        console.log("Error:", err);
-      }
-    );
-  };
+useEffect(() => {
+        getProducts()
+    }, []);
+    const getProducts = () => {
+        axios({
+            method: "get",
+            url: "https://fakestoreapi.com/products/" + id1,
+        }).then(
+            (req) => {
+                setProd1(req.data);
+            },
+            (err) => {
+                console.log("Error:", err);
+            }
+        );
+        axios({
+            method: "get",
+            url: "https://fakestoreapi.com/products/" + id2,
+        }).then(
+            (req) => {
+                setProd2(req.data);
+            },
+            (err) => {
+                console.log("Error:", err);
+            }
+        );
+        axios({
+            method: "get",
+            url: "https://fakestoreapi.com/products/" + id3,
+        }).then(
+            (req) => {
+                setProd3(req.data);
+            },
+            (err) => {
+                console.log("Error:", err);
+            }
+        );
+        axios({
+            method: "get",
+            url: "https://fakestoreapi.com/products/" + id4,
+        }).then(
+            (req) => {
+                setProd4(req.data);
+            },
+            (err) => {
+                console.log("Error:", err);
+            }
+        );
+        axios
+        ({
+            method: "get",
+            url: "https://fakestoreapi.com/products/" + id5,
+        })
+        .then(
+            (req) => {
+                setProd5(req.data);
+            },
+            (err) => {
+                console.log("Error:", err);
+            }
+        );
+        axios({
+            method: "get",
+            url: "https://fakestoreapi.com/products/" + id6,
+        }).then(
+            (req) => {
+                setProd6(req.data);
+            },
+            (err) => {
+                console.log("Error:", err);
+            }
+        );
+        axios({
+            method: "get",
+            url: "https://fakestoreapi.com/products/" + id7,
+        }).then(
+            (req) => {
+                setProd7(req.data);
+            },
+            (err) => {
+                console.log("Error:", err);
+            }
+        );
+        axios({
+            method: "get",
+            url: "https://fakestoreapi.com/products/" + id8,
+        }).then(
+            (req) => {
+                setProd8(req.data);
+            },
+            (err) => {
+                console.log("Error:", err);
+            }
+        );
+        axios({
+            method: "get",
+            url: "https://fakestoreapi.com/products/" + id9,
+        }).then(
+            (req) => {
+                setProd9(req.data);
+            },
+            (err) => {
+                console.log("Error:", err);
+            }
+        );
+        axios({
+            method: "get",
+            url: "https://fakestoreapi.com/products/" + id10,
+        }).then(
+            (req) => {
+                setProd10(req.data);
+            },
+            (err) => {
+                console.log("Error:", err);
+            }
+        );
+    }
 
   return (
     <div
