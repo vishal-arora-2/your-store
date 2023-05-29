@@ -45,7 +45,7 @@ const Products = () => {
         "https://fakestoreapi.com/products/" + id.id
       );
       setData(response.data);
-      console.log(data);
+     
     } catch (error) {
       console.log(error);
     }
@@ -53,7 +53,6 @@ const Products = () => {
   useEffect(() => {
     getProducts();
   }, []);
-  console.log(data.category);
   var cat = data.category;
 
   return (
