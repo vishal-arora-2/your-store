@@ -45,14 +45,26 @@ describe("test of Payment Pages", () => {
     );
     expect(getByText("Total amount")).toBeTruthy();
   });
-//   test("confirm button exits", () => {
-//     const { getByTestId } = render(
-//       <Provider store={store}>
-//         <Payment/>
-//       </Provider>
-//     );
-//     expect(getByTestId("confirm")).toBeInTheDocument();
-//   });
+  
+  test("COD button exits", () => {
+    const { getByTestId } = render(
+      <Provider store={store}>
+        <Payment/>
+      </Provider>
+    );
+    expect(getByTestId("COD")).toBeInTheDocument();
+       
+  });
+  test("confirm button exits", () => {
+    const { getByTestId } = render(
+      <Provider store={store}>
+        <Payment/>
+      </Provider>
+    );
+    expect(getByTestId("COD")).toBeInTheDocument();
+    fireEvent.click(getByTestId("COD"))
+    expect(getByTestId("confirm")).toBeInTheDocument();
+  });
   });
 
 //   test("Women's Clothing exists", () => {
