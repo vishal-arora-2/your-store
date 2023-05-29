@@ -29,7 +29,8 @@ const Products = () => {
   const addToCart = () => {
     setQuantity(quantity + 1);
     dispatch(cartActions.addItem(data, quantity));
-    console.log(data);
+   
+   
   };
   const cart = useSelector((state) => {
     return state.cart;
@@ -97,8 +98,8 @@ const Products = () => {
               <span className="divider" />
               <div className="info-item">
                 <span className="text-bold">
-                  Category:
-                  <span>{data.category}</span>
+                  Category  &nbsp;:  
+                  <span>  &nbsp;{data.category}</span>
                 </span>
                 <span className="text-bold">
                   Share:

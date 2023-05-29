@@ -31,13 +31,13 @@ const CardComponent = (props) => {
         style={{ width: "13rem", borderRadius: "15px" }}
         className="m-3 card1"
       >
-        <a>
+        <Link to={`product/${id}`}>
           <Card.Img
             variant="top"
             src={image}
             style={{ height: "13rem", padding: "36px" }}
           />
-        </a>
+        </Link>
 
         <Card.Body>
           <Card.Title
