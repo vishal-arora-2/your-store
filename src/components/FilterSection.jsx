@@ -18,6 +18,7 @@ const FilterSection = (props) => {
       <div className="buttons dflex justift-content-centre mb-5 pb-5 ">
         <ul>
           <button
+            data-testid="ALL"
             className="btn btn-light"
             onClick={() => props.setFilter(props.data)}
           >
@@ -25,6 +26,7 @@ const FilterSection = (props) => {
           </button>
           <hr />
           <button
+            data-testid="men"
             className="btn btn-light"
             onClick={() => props.filterProduct("men's clothing")}
           >
@@ -32,6 +34,7 @@ const FilterSection = (props) => {
           </button>
           <hr />
           <button
+            data-testid="women"
             className="btn btn-light"
             onClick={() => props.filterProduct("women's clothing")}
           >
@@ -39,6 +42,7 @@ const FilterSection = (props) => {
           </button>
           <hr />
           <button
+            data-testid="jewelery"
             className="btn btn-light"
             onClick={() => props.filterProduct("jewelery")}
           >
@@ -46,6 +50,7 @@ const FilterSection = (props) => {
           </button>
           <hr />
           <button
+            data-testid="electronics"
             className="btn btn-light"
             onClick={() => props.filterProduct("electronics")}
           >

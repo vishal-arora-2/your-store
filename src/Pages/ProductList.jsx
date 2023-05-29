@@ -29,9 +29,8 @@ const ProductList = () => {
   };
   return (
     <div className="container-fluid">
-      HELLO
       <div className="row">
-        <div className="col-md-2">
+        <div className="col-md-2" data-testid="filterSectionId">
           <FilterSection
             filterPrice={filterPrice}
             filterProduct={filterProduct}
