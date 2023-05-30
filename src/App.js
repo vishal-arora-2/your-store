@@ -3,7 +3,7 @@ import Myrouter from './Pages/Myrouter';
 
 function App() {
   return (
-    <div>
+    <div data-testid='app'>
       <Myrouter />
     </div>
   );
