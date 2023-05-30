@@ -54,9 +54,9 @@ const Footer = () => {
         <MDBContainer className="text-center text-md-start mt-5">
           <MDBRow className="mt-3">
             <MDBCol md="3" lg="4" xl="3" className="mx-auto mb-4">
-              <h6 className="text-uppercase fw-bold mb-4">CARTit</h6>
+              <h6 className="text-uppercase fw-bold mb-4">Your Store</h6>
               <p>
-                Experience hassle-free shopping at its best with CARTit - Your
+                Experience hassle-free shopping at its best with Your Store - Your
                 trusted destination for all your online retail needs, providing
                 conveniece, variety and unbeatable deals!
               </p>
@@ -137,7 +137,7 @@ const Footer = () => {
       >
         © 2023 Copyright:
         <a className="text-reset fw-bold" href="https://mdbootstrap.com/">
-          &nbsp;Cartit
+          &nbsp;Your Store
         </a>
       </div>
     </MDBFooter>
