@@ -22,21 +22,22 @@ const Products = () => {
   const id = useParams();
   const [data, setData] = useState([]);
   const dispatch = useDispatch();
-    const minusHandeler = () => {
-      setQuantity(quantity - 1);
-      dispatch(cartActions.decreaseCart(data, quantity));
-    };
-    const addToCart = () => {
-      setQuantity(quantity + 1);
-      dispatch(cartActions.addItem(data, quantity));
-
-    };
-    const cart = useSelector((state) => {
-      return state.cart;
-    });
-    const plusHandeler = () => {
-      addToCart();
-    };
+  const minusHandeler = () => {
+    setQuantity(quantity - 1);
+    dispatch(cartActions.decreaseCart(data, quantity));
+  };
+  const addToCart = () => {
+    setQuantity(quantity + 1);
+    dispatch(cartActions.addItem(data, quantity));
+   
+   
+  };
+  const cart = useSelector((state) => {
+    return state.cart;
+  });
+  const plusHandeler = () => {
+    addToCart();
+  };
 
   const getProducts = async () => {
     try {
@@ -96,8 +97,8 @@ const Products = () => {
               <span className="divider" />
               <div className="info-item">
                 <span className="text-bold">
-                  Category:
-                  <span>{data.category}</span>
+                  Category  &nbsp;:  
+                  <span>  &nbsp;{data.category}</span>
                 </span>
                 <span className="text-bold">
                   Share:
