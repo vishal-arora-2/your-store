@@ -20,7 +20,32 @@ const Home = () => {
           autoplay
         ></lottie-player>
       </div>
+      <div class="letter-image">
+	<div className="animated-mail">
+    <h6 style={{color:"white",marginLeft:"68px",marginTop:"20px"}}>open me !</h6>
+		<div class="back-fold"></div>
+		<div class="letter">
+	> You're Special to us...
+			<div class="letter-border"></div>
+			<div class="letter-title"></div>
+			<div class="letter-context"></div>
+			> use Coupon code 'first' to get 60% Off...
+      <br></br>
+      <h6 style={{textAlign:"right",fontSize:"small"}}>Regards</h6>
+      <h6 style={{textAlign:"right",fontSize:"small"}}>YOURstore</h6>
 
+			<div class="letter-stamp">
+				<div class="letter-stamp-inner"></div>
+			</div>
+		</div>
+		<div class="top-fold"></div>
+		
+		<div class="bodyy"></div>
+		<div class="left-fold"></div>
+	</div>
+	<div class="shadoww"></div>
+</div>
+      
       <div class="d-flex justify-content-center mt-3">
         <button
           className="btn rounded-pill"

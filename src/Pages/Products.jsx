@@ -47,7 +47,6 @@ const Products = () => {
         "https://fakestoreapi.com/products/" + id.id
       );
       setData(response.data);
-      console.log(data);
      
     } catch (error) {
       console.log(error);

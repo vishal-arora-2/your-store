@@ -5,13 +5,13 @@ const Contact = () => {
     <div class="container mt-5 mb-5 shadow-lg ">
       <div class="row ">
         <div class="col-md-4 bg-primary p-5 text-white order-sm-first order-last">
-          <h2 className="display-6 nam">Let's get in touch</h2>
+          <h2 className="display-6 nam" style={{fontSize:"35px"}}>Let's get in touch</h2>
           <br></br>
           <p>We're open for any suggestion or just to have a chat...</p>
           <div class="d-flex mt-2">
             <i class="bi bi-geo-alt"></i>
             <p class="mt-3">
-              Address : Oxygen Bussiness Park , Global Logic Hitachi
+              Address : Oxygen Bussiness Park Global Logic Hitachi
             </p>
           </div>
           <div class="d-flex mt-2">
@@ -26,7 +26,7 @@ const Contact = () => {
             <i class="bi bi-youtube"></i>
             <p class="mt-4">Channel : www.contactform.com/</p>
           </div>
-          <h6 className="display-6 nam">Just CARTit</h6>
+          <h6 className="display-6 nam" style={{fontSize:"35px"}}>yourstore</h6>
         </div>
         <div class="col-md-8 p-5 ">
           <h2 className="display-6">Get Connected With Us</h2>

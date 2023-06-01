@@ -7,6 +7,7 @@ import { cartActions } from "../../slice/cartSlice";
 import { NavLink } from "react-router-dom";
 import {MdOutlineShoppingCartCheckout} from 'react-icons/md'
 import {BsMinecartLoaded} from 'react-icons/bs'
+import {RxCross2} from 'react-icons/rx'
 
 
 const Total = (props) => {
@@ -72,7 +73,7 @@ const Total = (props) => {
  
   return (
     <div class="col-md-4">
-      <div class="card mb-4">
+      <div class="card mb-4" style={{width:"350px"}} >
         <div class="card-header py-3">
           <h5 class="mb-0 display-6" style={{fontSize:"28px"}}>Summary</h5>
         </div>
@@ -118,9 +119,11 @@ const Total = (props) => {
                     </li>
                     {
                       f2 ? <>
-                        <div class="alert alert-success" role="alert">
-                          Congratulations {message} has been applied..!!
-                          <button onClick={removeDiscount}>X</button>
+                        <div class="alert alert-success" role="alert" style={{fontSize:"13px",textAlign:"right"}}>
+
+                          Congratulations {message} has been applied !! &nbsp;
+                          <button onClick={removeDiscount} style={{border:"0px",backgroundColor:"#d4edda"}}><RxCross2/></button>
+
                         </div>              </> : <></>
                     }
                 <form class="card p-2 m-2">
@@ -199,13 +202,13 @@ const Total = (props) => {
           ) : (
             <>
                 <NavLink to="/cartreview" style={{ textDecoration: "none" }}>
-                 <div className="a">
+                 <div className="a mx-4">
                     <span>Checkout <MdOutlineShoppingCartCheckout /></span>
                     <div class="liquid"></div>
                   </div>
                 </NavLink>
                 
-              <button onClick={removeallfromcart} style={{backgroundColor:"white",border:"0px"}}>
+              <button onClick={removeallfromcart} className="mx-4"  style={{backgroundColor:"white",border:"0px"}}>
                  <div className="b" style={{ marginTop: "10px" }}>
                     <span>Clear cart  <BsMinecartLoaded/></span>
                     <div class="liquid"></div>
