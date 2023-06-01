@@ -5,11 +5,10 @@ import { useState, useEffect } from "react";
 import { FaShippingFast, FaDollarSign, FaCreditCard } from "react-icons/fa";
 import { BsCashCoin } from "react-icons/bs";
 import { useDispatch } from "react-redux";
-import { render } from '@testing-library/react';
-import ReactConfetti from 'react-confetti';
-import { cartActions } from '../slice/cartSlice';
-import { useNavigate } from 'react-router-dom/dist';
-
+import { render } from "@testing-library/react";
+import ReactConfetti from "react-confetti";
+import { cartActions } from "../slice/cartSlice";
+import { useNavigate } from "react-router";
 
 const Payment = (props) => {
   const [windowDimension, setDimension] = useState({
@@ -60,9 +59,9 @@ const Payment = (props) => {
 
   return (
     <>
-      <div className="row">
+      <div className ="row ">
         {/* card */}
-        <div class="col-md-4 mt-4 ml-4">
+        <div class="col-md-7 mt-4 ml-4 " >
           <div class="card mb-5  shadow p-3 mb-5 bg-white rounded">
             <div class="card-header py-3">
               <h5 class="mb-0">
@@ -79,13 +78,13 @@ const Payment = (props) => {
               </div>
               <div className="shadow p-3 mb-5 bg-white rounded">
                 {" "}
-                <input type="radio" onChange={fire} value="cod" /> &nbsp;&nbsp;
+                <input  data-testid = "COD" type="radio" onChange={fire} value="cod" /> &nbsp;&nbsp;
                 <BsCashCoin /> &nbsp;&nbsp;Cash On Delivery{" "}
               </div>
               {!one ? (
                 <span></span>
               ) : (
-                <button className="btn btn-success" onClick={confirm}>
+                <button data-testid = "confirm" className="btn btn-success" onClick={confirm}>
                   Confirm
                   {two ? (
                     <ReactConfetti
@@ -104,7 +103,9 @@ const Payment = (props) => {
         </div>
 
         {/* summary card */}
-        <div class="col-md-4 mt-4 ml-4  ">
+     
+        <div class="col-md-4 mt-4 ml-4  "> 
+    
           <div class="card mb-5  shadow p-3 mb-5 bg-white rounded">
             <div class="card-header py-3">
               <h5 class="mb-0">Summary</h5>
@@ -156,6 +157,7 @@ const Payment = (props) => {
               </ul>
             </div>
           </div>
+       
         </div>
       </div>
     </>

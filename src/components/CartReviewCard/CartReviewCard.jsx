@@ -2,7 +2,7 @@ import React from "react";
 const CartReviewCard = (props) => {
  
   return (
-    <>
+    <div data-testid='cartreviewcard'> 
         
       <ul class="list-group mb-3 ">
         <li class="list-group-item d-flex justify-content-between lh-sm bg-light">
@@ -22,7 +22,7 @@ const CartReviewCard = (props) => {
               
          
     
-</>
+</div>
   );
 };
 
