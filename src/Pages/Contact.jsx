@@ -26,7 +26,7 @@ const Contact = () => {
             <i className="bi bi-youtube"></i>
             <p className="mt-4">Channel : www.contactform.com/</p>
           </div>
-          <h6 className="display-6 nam">Just CARTit</h6>
+          <h6 className="display-6 nam" style={{fontSize:"35px"}}>yourstore</h6>
         </div>
         <div className="col-md-8 p-5 ">
           <h2 className="display-6">Get Connected With Us</h2>
