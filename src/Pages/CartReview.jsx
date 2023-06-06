@@ -60,8 +60,7 @@ const CartReview = () => {
                   type="text"
                   class="form-control  border"
                   id="firstName"
-                  placeholder=""
-                  value=""
+                  placeholder="first name"
                   required
                 />
                 <div class="invalid-feedback">
@@ -77,8 +76,7 @@ const CartReview = () => {
                   type="text"
                   class="form-control border"
                   id="lastName"
-                  placeholder=""
-                  value=""
+                  placeholder="last name"
                   required
                 />
                 <div class="invalid-feedback">Valid last name is required.</div>
@@ -177,9 +175,12 @@ const CartReview = () => {
             </div>
             <hr class="my-4" />
             {/* <Link to="/payment"> */}
-            <button class="w-100 btn btn-success btn-md" type="submit">
+            <a href="payment">
+            <button class="w-100 btn btn-success btn-md mb-4" type="button">
               Continue to Payment
             </button>
+            </a>
+           
             {/* </Link> */}
           </form>
         </div>

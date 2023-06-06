@@ -29,10 +29,8 @@ const Search = () => {
   }
   return (
     <div>
-      <div className='heading'>You have Search for {query.get('q')}</div>
+      <div className='heading  text-center' style={{fontSize:"40px" , color:"rgba(164,168,231,255)"}}>You have Search for {query.get('q')}</div>
       <div >
-        <h1 style={{ fontFamily: "cursive" }} className='heading text-danger'>Products</h1>
-        
         <div className="col-md-12">
           {searched?.map((items) => {
             return <CardComponent data={items} />;

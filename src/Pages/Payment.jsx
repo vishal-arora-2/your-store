@@ -55,8 +55,8 @@ const Payment = (props) => {
       Navigate("/");
     });
   };
-  var showTotal = localStorage.getItem("totalAmt");
-
+  var showTotal = Number(localStorage.getItem("totalAmt")).toFixed(2);
+  
   return (
     <>
       <div className ="row ">
@@ -65,7 +65,8 @@ const Payment = (props) => {
           <div class="card mb-5  shadow p-3 mb-5 bg-white rounded">
             <div class="card-header py-3">
               <h5 class="mb-0">
-                <FaDollarSign /> Payment Options
+                <FaDollarSign /> Payment Options <span className="text-danger">Only COD available</span>
+                
               </h5>
               <div className="mt-4 mb-2 shadow p-3 mb-5 bg-white rounded">
                 {" "}
@@ -74,7 +75,7 @@ const Payment = (props) => {
               </div>
               <div className="mb-2 shadow p-3 mb-5 bg-white rounded">
                 {" "}
-                <input type="radio" value="cartit" disabled /> CartIT Credits
+                <input type="radio" value="cartit" disabled /> &nbsp;&nbsp;<FaCreditCard /> &nbsp;&nbsp;  YourStore Credits
               </div>
               <div className="shadow p-3 mb-5 bg-white rounded">
                 {" "}

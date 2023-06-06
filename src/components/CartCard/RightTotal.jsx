@@ -128,9 +128,11 @@ const Total = (props) => {
                     {f2 ? (
                       <div data-testid="coupon">
                         <div className="alert alert-success" role="alert">
-                          Congratulations {message} has been applied..!!
-                          <button onClick={removeDiscount}>X</button>
-                        </div>{" "}
+                          Coupon "{message}" has been applied!!!
+                          <span class="position-absolute top-0 start-100 translate-middle rounded-pill badge-light  ">
+                            <button className="btn" onClick={removeDiscount}><b>X</b></button>
+                          </span>
+                        </div>
                       </div>
                     ) : (
                       <></>
